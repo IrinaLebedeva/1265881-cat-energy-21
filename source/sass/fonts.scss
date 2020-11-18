@@ -1,0 +1,17 @@
+$page__font--main: Arial, sans-serif;
+
+@font-face {
+  font-family: "Oswald Regular";
+  src: url("../fonts/oswaldregular.woff2")
+    format("woff2");
+  src: url("../fonts/oswaldregular.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "Oswald Medium";
+  src: url("../fonts/oswaldmedium.woff2")
+    format("woff2");
+  src: url("../fonts/oswaldmedium.woff")
+    format("woff");
+}

@@ -1,0 +1,30 @@
+.case-card {
+  background-color: $background-color--secondary;
+
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+}
+
+.case-card__title {
+  @include font-accent-regular(24px, 37px, $color--secondary);
+  text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.case-card__text {
+  padding-bottom: 23px;
+  margin: 0;
+  margin-bottom: 15px;
+
+  border-bottom: 1px solid $color--border-main;
+}
+
+.case-card__link {
+  @include font-accent-regular(16px, 16px, $color--secondary);
+  text-transform: uppercase;
+  text-decoration: none;
+}

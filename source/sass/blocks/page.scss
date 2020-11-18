@@ -1,0 +1,12 @@
+.page {
+  box-sizing: border-box;
+}
+
+.page__body {
+  margin: 0;
+  padding: 0;
+
+  @include font-main(14px, 18px, $color--main);
+
+  background-color: $background-color--main;
+}

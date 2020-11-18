@@ -1,0 +1,17 @@
+.features__title {
+  @include font-accent-regular($font-size-h2--accent-regular, $line-height-h2--accent-regular, $color--secondary);
+
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.features__list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.features__item:not(:last-child) {
+  margin-bottom: 20px;
+}

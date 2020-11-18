@@ -1,0 +1,28 @@
+.stats-list__item {
+  display: flex;
+  flex-direction: column-reverse;
+
+  &--cost {
+    flex-direction: row;
+  }
+}
+
+.stats-list__description {
+  @include font-main(12px, 12px);
+
+  &--cost {
+    @include font-accent-regular(14px, 20px, $color--secondary);
+    text-transform: uppercase;
+  }
+}
+
+.stats-list__number {
+  @include font-accent-regular(24px, 24px, $color--secondary);
+  text-transform: uppercase;
+
+  margin: 0;
+
+  &--cost {
+    @include font-accent-regular(14px, 20px);
+  }
+}

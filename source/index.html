@@ -2,7 +2,9 @@
 <html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи: главная</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -21,44 +23,46 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item nav-list__item--active">
-              <a>Главная</a>
+              <a class="nav-list__link">Главная</a>
             </li>
             <li class="nav-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="nav-list__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="nav-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-main">
-      <section class="tagline">
-        <h1>Функциональное питание для котов</h1>
-        <p>Занялся собой? Займись котом!</p>
-        <div class="tagline__wrapper">
-          <img src="img/cat-energy-pro--500-chicken-tagline.png" width="280" height="270" alt="Изображение куриного корма для котов">
-          <a class="button" href="form.html">Подобрать программу</a>
+      <section class="page-main__tagline tagline">
+        <div class="container">
+          <h1 class="tagline__title">Функциональное питание для котов</h1>
+          <p class="tagline__text">Занялся собой? Займись котом!</p>
+          <div class="tagline__wrapper">
+            <img src="img/cat-energy-pro--500-chicken-tagline.png" width="280" height="270" alt="Изображение куриного корма для котов">
+            <a class="button" href="form.html">Подобрать программу</a>
+          </div>
         </div>
       </section>
-      <section class="cases">
+      <section class="page-main__cases cases container">
         <h2 class="visually-hidden">Варианты программ питания:</h2>
         <ul class="cases__list">
           <li class="cases__item case-card">
-            <h3>Похудение</h3>
-            <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a href="catalog.html#slim">Каталог slim</a>
+            <h3 class="case-card__title">Похудение</h3>
+            <p class="case-card__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="case-card__link" href="catalog.html#slim">Каталог slim</a>
           </li>
           <li class="cases__item case-card">
-            <h3>Набор массы</h3>
-            <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a href="catalog.html#pro">Каталог pro</a>
+            <h3 class="case-card__title">Набор массы</h3>
+            <p class="case-card__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="case-card__link" href="catalog.html#pro">Каталог pro</a>
           </li>
         </ul>
       </section>
-      <section class="features">
-        <h2>Как это работает</h2>
+      <section class="page-main__features features container">
+        <h2 class="features__title">Как это работает</h2>
         <ul class="features__list">
           <li class="features__item features__item--icon-leaf">
             Функциональное питание содержит только полезные питательные вещества.
@@ -74,92 +78,100 @@
           </li>
         </ul>
       </section>
-      <section class="example">
-        <h2>Живой пример</h2>
-        <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__wrapper">
-          <dl class="example__stats stats-list">
-            <div class="stats-list__item">
-              <dt class="stats-list__description">снижение веса</dt>
-              <dd class="stats-list__number">5 кг</dd>
+      <section class="page-main__example example">
+        <div class="container">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__wrapper">
+            <dl class="example__stats stats-list">
+              <div class="stats-list__item">
+                <dt class="stats-list__description">снижение веса</dt>
+                <dd class="stats-list__number">5 кг</dd>
+              </div>
+              <div class="stats-list__item">
+                <dt class="stats-list__description">затрачено времени</dt>
+                <dd class="stats-list__number">60 дней</dd>
+              </div>
+              <div class="stats-list__item stats-list__item--cost">
+                <dt class="stats-list__description stats-list__description--cost">Затраты на питание:</dt>
+                <dd class="stats-list__number stats-list__number--cost">15 000 руб.</dd>
+              </div>
+            </dl>
+            <div class="example__slider slider">
+              <ul class="slider__list">
+                <li class="slider__item slider__item--active">
+                  <img src="img/example-cat-before.png" width="251" height="240" alt="Фотография кота до программы похудения">
+                </li>
+                <li class="slider__item">
+                  <img src="img/example-cat-after.png" width="251" height="240" alt="Фотография кота после программы похудения">
+                </li>
+              </ul>
+              <p class="slider__toggles-list">
+                <button class="slider__toggles-item slider__toggles-item--active" type="button">Было</button>
+                <button class="slider__toggles-item" type="button">Стало</button>
+              </p>
             </div>
-            <div class="stats-list__item">
-              <dt class="stats-list__description">затрачено времени</dt>
-              <dd class="stats-list__number">60 дней</dd>
-            </div>
-            <div class="stats-list__item stats-list__item--cost">
-              <dt class="stats-list__description">Затраты на питание:</dt>
-              <dd class="stats-list__number">15 000 руб.</dd>
-            </div>
-          </dl>
-          <div class="example__slider slider">
-            <ul class="slider__list">
-              <li class="slider__item slider__item--active">
-                <img src="img/example-cat-before.png" width="251" height="240" alt="Фотография кота до программы похудения">
-              </li>
-              <li class="slider__item">
-                <img src="img/example-cat-after.png" width="251" height="240" alt="Фотография кота после программы похудения">
-              </li>
-            </ul>
-            <p class="slider__toggles-list">
-              <button class="slider__toggles-item slider__toggles-item--active" type="button">Было</button>
-              <button class="slider__toggles-item" type="button">Стало</button>
-            </p>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts contacts--index">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <div class="contacts__text">
-          <p class="contacts__headline">Приглашаем к сотрудничеству дилеров!</p>
-          <div class="contacts__address address">
-            <p class="address__street">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="address__town">Санкт-Петербург</p>
+      <div class="page-footer__contacts contacts">
+        <div class="container">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <div class="contacts__text">
+            <p class="contacts__headline">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <div class="contacts__address address">
+              <p class="address__street">ул. Большая Конюшенная, д.&nbsp;19/8</p>
+              <p class="address__town">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
-        <img class="contacts__map" src="img/map.jpg" width="320" height="362" alt="Адрес компании Кэт энерджи: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
       </div>
-      <div class="page-footer__bottom footer">
-        <a class="footer__logo-link" aria-label="Логотип Кэт энерджи">
-          <svg class="footer__logo" width="128" height="24">
-            <use xlink:href="img/sprite.svg#footer__logo"></use>
-          </svg>
-        </a>
-        <div class="footer__social social">
-          <h2 class="visually-hidden">Ссылки на страницы компании в социальных сетях</h2>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#" target="_blank" aria-label="Кэт энерджи ВКонтакте">
-                <svg class="social__icon-vk" width="22" height="22">
-                  <use xlink:href="img/sprite.svg#social__link--icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--icon-facebook" href="#" target="_blank" aria-label="Кэт энерджи Фейсбук">
-                <svg class="social__icon-facebook" width="22" height="22">
-                  <use xlink:href="img/sprite.svg#social__link--icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--icon-instagram" href="#" target="_blank" aria-label="Кэт энерджи Инстаграм">
-                <svg class="social__icon-instagram" width="22" height="22">
-                  <use xlink:href="img/sprite.svg#social__link--icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__copyright copyright">
-          <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <svg class="copyright__logo" width="27" height="34">
-              <use xlink:href="img/sprite.svg#copyright__logo"></use>
-            </svg>
-          </a>
+      <img class="page-footer__map" src="img/map.jpg" width="320" height="362" alt="Адрес компании Кэт энерджи: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+      <div class="page-footer__bottom">
+        <div class="container footer">
+          <div class="footer__logo-link-wrapper">
+            <a class="footer__logo-link" aria-label="Логотип Кэт энерджи">
+              <svg class="footer__logo" width="128" height="24">
+                <use xlink:href="img/sprite.svg#footer__logo"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__social social">
+            <h2 class="visually-hidden">Ссылки на страницы компании в социальных сетях</h2>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#" target="_blank" aria-label="Кэт энерджи ВКонтакте">
+                  <svg class="social__icon-vk" width="22" height="22">
+                    <use xlink:href="img/sprite.svg#social__link--icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--icon-facebook" href="#" target="_blank" aria-label="Кэт энерджи Фейсбук">
+                  <svg class="social__icon-facebook" width="22" height="22">
+                    <use xlink:href="img/sprite.svg#social__link--icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--icon-instagram" href="#" target="_blank" aria-label="Кэт энерджи Инстаграм">
+                  <svg class="social__icon-instagram" width="22" height="22">
+                    <use xlink:href="img/sprite.svg#social__link--icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__copyright copyright">
+            <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <svg class="copyright__logo" width="27" height="34">
+                <use xlink:href="img/sprite.svg#copyright__logo"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

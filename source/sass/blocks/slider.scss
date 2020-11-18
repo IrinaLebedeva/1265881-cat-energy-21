@@ -1,0 +1,14 @@
+.slider__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slider__toggles-item {
+  @include font-accent-regular(16px, 20px, $color--secondary);
+  text-transform: uppercase;
+
+  background-color: $background-color--secondary-accent;
+
+  border: none;
+}

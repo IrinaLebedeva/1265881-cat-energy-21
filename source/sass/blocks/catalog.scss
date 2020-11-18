@@ -1,0 +1,27 @@
+.catalog__title {
+  @include font-accent-regular(36px, 36px, $color--secondary);
+
+  padding: 0 20px;
+}
+
+.catalog__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__item {
+  max-width: 727px;
+  margin: 0 auto;
+
+  padding-top: 19px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+
+  border-top: 1px solid #ebebeb;
+
+  &--latest-products {
+    border-bottom: 1px solid #ebebeb;
+  }
+}

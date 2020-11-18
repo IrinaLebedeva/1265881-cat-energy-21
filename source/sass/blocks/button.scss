@@ -1,0 +1,24 @@
+.button {
+  @include font-accent-regular(14px, 18px, $color--accent);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  display: block;
+  text-align: center;
+
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  background-color: $background-color--accent;
+
+  @media ($tablet-width) {
+    display: inline-block;
+  }
+
+  &--secondary {
+    font-size: 16px;
+    color: $color--main;
+
+    background-color: $background-color--secondary;
+  }
+}
