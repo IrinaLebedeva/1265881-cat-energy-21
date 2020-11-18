@@ -2,7 +2,6 @@
   font-family: $font-face--main;
   font-weight: $font-weight--main;
   font-style: $font-style--main;
-
   @if ($size) {
     font-size: $size;
   }
@@ -18,7 +17,6 @@
   font-family: $font-face--accent-regular;
   font-weight: $font-weight--accent-regular;
   font-style: $font-style--accent-regular;
-
   @if ($size) {
     font-size: $size;
   }
