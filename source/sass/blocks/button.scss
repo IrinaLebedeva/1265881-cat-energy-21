@@ -1,5 +1,5 @@
 .button {
-  @include font-accent-regular(14px, 18px, $color--accent);
+  @include font-accent-regular(16px, 20px, $color--accent);
   text-transform: uppercase;
   text-decoration: none;
 
@@ -16,9 +16,13 @@
   }
 
   &--secondary {
-    font-size: 16px;
     color: $color--main;
 
     background-color: $background-color--secondary;
+  }
+
+  &--small-font {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
