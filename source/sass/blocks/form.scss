@@ -32,6 +32,58 @@
   }
 }
 
-.form__col {
+.form__label {
+  @include font-accent-regular(16px, 18px, $color--main);
+  text-transform: uppercase;
+}
+
+.form__input {
+  border-width: 1px;
+  border-color: $form-input--border;
+  border-style: solid;
+  border-radius: 0;
+
+  padding-top: 13px;
+  padding-right: 15px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+
+  @include font-accent-regular(16px, 18px, $color--main);
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: $color--main;
+    opacity: 1;
+  }
+
+  &--accent {
+    border-color: $form-input--border-accent;
+  }
+
+  &--text {
+    flex-grow: 1;
+  }
+
+  &--textarea {
+    width: 100%;
+    height: 150px;
+
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+}
+
+.form__button {
+  margin-bottom: 21px;
+}
+
+.form__comment {
+  @include font-main(14px, 16px, $color--secondary);
+
   display: block;
+  text-align: center;
+
+  @media ($tablet-width) {
+    display: inline-block;
+  }
 }

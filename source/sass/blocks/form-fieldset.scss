@@ -6,3 +6,16 @@
     margin-bottom: 0;
   }
 }
+
+.form-fieldset__field {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-fieldset__label {
+  margin-right: 15px;
+
+  &--closer-to-field {
+    margin-right: 12px;
+  }
+}

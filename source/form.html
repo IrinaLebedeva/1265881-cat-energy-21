@@ -43,15 +43,15 @@
           <fieldset class="form__col form__fieldset form-fieldset">
             <legend class="visually-hidden">Данные кота</legend>
             <p class="form-fieldset__field">
-              <label class="form__label" for="pet-name">Имя:*</label>
+              <label class="form__label form-fieldset__label" for="pet-name">Имя:*</label>
               <input class="form__input form__input--text" name="pet-name" id="pet-name" type="text" minlength="2" required placeholder="Барсик">
             </p>
             <p class="form-fieldset__field">
-              <label class="form__label" for="pet-weight">Вес (кг):*</label>
+              <label class="form__label form-fieldset__label" for="pet-weight">Вес (кг):*</label>
               <input class="form__input form__input--text" name="pet-weight" id="pet-weight" type="number" min="0" max="20" required placeholder="7">
             </p>
             <p class="form-fieldset__field">
-              <label class="form__label" for="pet-age">Возраст (лет):</label>
+              <label class="form__label form-fieldset__label" for="pet-age">Возраст (лет):</label>
               <input class="form__input form__input--text" name="pet-age" id="pet-age" type="number" min="0" max="20" placeholder="7">
             </p>
           </fieldset>
@@ -77,14 +77,14 @@
           <div class="container container--with-horizontal-border">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
           </div>
-          <div class="container">
-            <p class="form__col">
-              <label class="form__label" for="pet-owner-email">E-mail:*</label>
-              <input class="form__input form__input--text" name="pet-owner-email" id="pet-owner-email" type="email" required placeholder="kuklachev@gmail.com">
+          <div class="container form-fieldset">
+            <p class="form__col form-fieldset__field">
+              <label class="form__label form-fieldset__label--closer-to-field" for="pet-owner-email">E-mail:*</label>
+              <input class="form__input form__input--accent form__input--text" name="pet-owner-email" id="pet-owner-email" type="email" required placeholder="kuklachev@gmail.com">
             </p>
-            <p class="form__col">
-              <label class="form__label" for="pet-owner-phone">Телефон:*</label>
-              <input class="form__input form__input--text" name="pet-owner-phone" id="pet-owner-phone" type="tel" required placeholder="8 (960) 900-60-90">
+            <p class="form__col form-fieldset__field">
+              <label class="form__label form-fieldset__label--closer-to-field" for="pet-owner-phone">Телефон:*</label>
+              <input class="form__input form__input--accent form__input--text" name="pet-owner-phone" id="pet-owner-phone" type="tel" required placeholder="8 (960) 900-60-90">
             </p>
           </div>
         </fieldset>
@@ -104,26 +104,26 @@
             <ul class="form-list form-list--row">
               <li class="form-list__item">
                 <input class="form-list__input form-list__input--checkbox" name="additional-sugar" id="additional-sugar" type="checkbox" value="sugar" checked>
-                <label class="form-list__label" for="additional-sugar">Сахарозаменитель</label>
+                <label class="form-list__label form-list__label--accent" for="additional-sugar">Сахарозаменитель</label>
               </li>
               <li class="form-list__item">
                 <input class="form-list__input form-list__input--checkbox" name="additional-water" id="additional-water" type="checkbox" value="water">
-                <label class="form-list__label" for="additional-water">Питьевая вода</label>
+                <label class="form-list__label form-list__label--accent" for="additional-water">Питьевая вода</label>
               </li>
               <li class="form-list__item">
                 <input class="form-list__input form-list__input--checkbox" name="additional-milk" id="additional-milk" type="checkbox" value="milk">
-                <label class="form-list__label" for="additional-milk">Молоко</label>
+                <label class="form-list__label form-list__label--accent" for="additional-milk">Молоко</label>
               </li>
               <li class="form-list__item">
                 <input class="form-list__input form-list__input--checkbox" name="additional-vitamins" id="additional-vitamins" type="checkbox" value="vitamins">
-                <label class="form-list__label" for="additional-vitamins">Витамины</label>
+                <label class="form-list__label form-list__label--accent" for="additional-vitamins">Витамины</label>
               </li>
             </ul>
           </div>
         </fieldset>
         <div class="form__row container">
           <div class="form__col">
-            <button class="button" type="submit">Отправить заявку</button>
+            <button class="button form__button" type="submit">Отправить заявку</button>
             <small class="form__comment">* — Обязательные поля</small>
           </div>
         </div>
