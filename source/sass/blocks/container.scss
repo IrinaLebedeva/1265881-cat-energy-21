@@ -1,6 +1,7 @@
 .container {
-  max-width: 1260px;
+  max-width: $desctop-max-width;
 
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0 20px;
 }

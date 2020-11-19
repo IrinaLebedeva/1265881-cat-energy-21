@@ -3,10 +3,9 @@
 }
 
 .other-products__list {
-  list-style: none;
-  margin: 0;
+  @include list-reset();
+
   margin-bottom: 30px;
-  padding: 0;
 }
 
 .other-products__item {
