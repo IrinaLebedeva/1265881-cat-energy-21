@@ -1,0 +1,27 @@
+.product__title-link {
+  text-decoration: none;
+}
+
+.product__title {
+  @include font-accent-regular(16px, 20px, $color--main-accent);
+  text-transform: uppercase;
+
+  margin: 0;
+}
+
+.product__feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__feature-name {
+  @include font-main(12px, 16px, $color--main);
+}
+
+.product__feature-value {
+  @include font-main(12px, 16px, $color--main);
+
+  &--price {
+    text-transform: uppercase;
+  }
+}

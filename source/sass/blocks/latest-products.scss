@@ -1,0 +1,18 @@
+.latest-products__title {
+  @include font-accent-regular(16px, 20px, $color--main-secondary);
+  text-transform: uppercase;
+
+  text-align: center;
+
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.latest-products__text {
+  @include font-main(12px, 16px, $color--main);
+
+  text-align: center;
+
+  margin: 0;
+  margin-bottom: 21px;
+}

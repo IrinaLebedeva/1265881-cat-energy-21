@@ -1,0 +1,14 @@
+.page-footer__contacts {
+  background-color: $background-color--main;
+
+  margin-bottom: 22px;
+
+  &--inner {
+    padding-top: 28px;
+    padding-bottom: 22px;
+
+    margin-bottom: 0;
+
+    background-color: $background-color--secondary;
+  }
+}

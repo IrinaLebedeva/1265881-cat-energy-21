@@ -1,0 +1,12 @@
+.contacts__text {
+  display: flex;
+}
+
+.contacts__headline {
+  @include font-accent-regular(16px, 18px, $color--main-secondary);
+  text-transform: uppercase;
+
+  margin: 0;
+  width: 140px;
+  min-width: 140px;
+}

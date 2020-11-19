@@ -1,0 +1,9 @@
+.cases__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cases__item:not(:last-child) {
+  margin-bottom: 20px;
+}

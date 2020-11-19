@@ -1,0 +1,11 @@
+.address {
+  @include font-main(14px, 20px, $color--main);
+}
+
+.address__street {
+  margin: 0;
+}
+
+.address__town {
+  margin: 0;
+}

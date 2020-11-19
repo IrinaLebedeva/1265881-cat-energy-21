@@ -1,0 +1,14 @@
+.catalog-tagline {
+  background-color: $background-color--tagline;
+
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-tagline__text {
+  @include font-main(16px, 20px, $background-color--main);
+
+  text-align: center;
+
+  max-width: 161px;
+}

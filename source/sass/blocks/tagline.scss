@@ -1,0 +1,20 @@
+.tagline {
+  background-color: $background-color--tagline;
+
+  padding-top: 27px;
+}
+
+.tagline__title {
+  @include font-accent-regular($font-size-h1--accent-regular, $line-height-h1--accent-regular, $color--accent);
+
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.tagline__text {
+  @include font-accent-regular(14px, 14px, $color--accent);
+  text-transform: uppercase;
+
+  padding: 0;
+  padding-bottom: 29px;
+}

@@ -1,0 +1,24 @@
+.other-products__title {
+  @include font-accent-regular(24px, 24px, $color--secondary);
+}
+
+.other-products__list {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.other-products__item {
+  padding-bottom: 20px;
+
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.other-products__tagline {
+  margin-bottom: 35px;
+}
