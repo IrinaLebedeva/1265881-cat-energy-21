@@ -2,44 +2,31 @@
   font-family: $font-face--main;
   font-weight: $font-weight--main;
   font-style: $font-style--main;
-  @if ($size) {
-    font-size: $size;
-  }
-  @if ($line-height) {
-    line-height: $line-height;
-  }
-  @if ($color) {
-    color: $color;
-  }
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
 }
 
 @mixin font-accent-regular($size: false, $line-height: false, $color: false) {
   font-family: $font-face--accent-regular;
   font-weight: $font-weight--accent-regular;
   font-style: $font-style--accent-regular;
-  @if ($size) {
-    font-size: $size;
-  }
-  @if ($line-height) {
-    line-height: $line-height;
-  }
-  @if ($color) {
-    color: $color;
-  }
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
 }
 
 @mixin font-accent-medium($size: false, $line-height: false, $color: false) {
   font-family: $font-face--accent-medium;
   font-weight: $font-weight--accent-medium;
   font-style: $font-style--accent-medium;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
 
-  @if ($size) {
-    font-size: $size;
-  }
-  @if ($line-height) {
-    line-height: $line-height;
-  }
-  @if ($color) {
-    color: $color;
-  }
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

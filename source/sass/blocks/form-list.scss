@@ -1,0 +1,16 @@
+.form-list {
+  @include list-reset();
+}
+
+.form-list .form-list__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.form-list__label {
+  @include font-accent-regular(16px, 18px, $color--main-accent);
+  text-transform: uppercase;
+
+  &--accent {
+    color: $color--secondary;
+  }
+}
