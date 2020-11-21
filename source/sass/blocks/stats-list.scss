@@ -1,18 +1,108 @@
+.stats-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  @media (min-width: $desctop-width) {
+    width: 436px;
+  }
+}
+
 .stats-list__item {
   display: flex;
   flex-direction: column-reverse;
+  justify-content: space-between;
+
+  width: 50%;
+
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+
+    margin-right: 42px;
+  }
 
   &--cost {
     flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+
+      width: auto;
+
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    @media (min-width: $desctop-width) {
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: flex-start;
+
+      margin-left: 0;
+    }
   }
 }
 
 .stats-list__description {
   @include font-main(12px, 12px);
+  background-color: $background-color--secondary-accent;
+  text-align: center;
+
+  width: 77px;
+
+  position: absolute;
+  bottom: 19px;
+  left: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+
+    width: auto;
+
+    bottom: 28px;
+    left: 27px;
+
+    padding: 0 4px;
+  }
+
+  @media (min-width: $desctop-width) {
+    bottom: 54px;
+  }
 
   &--cost {
     @include font-accent-regular(14px, 20px, $color--secondary);
     text-transform: uppercase;
+
+    width: auto;
+    margin-right: 2px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+
+      margin-right: 0;
+      margin-bottom: 9px;
+    }
+
+    @media (min-width: $desctop-width) {
+      margin-right: 63px;
+    }
+  }
+
+  &--time {
+    @media (min-width: $tablet-width) {
+      left: 14px;
+    }
   }
 }
 
@@ -20,9 +110,44 @@
   @include font-accent-regular(24px, 24px, $color--secondary);
   text-transform: uppercase;
 
+  border: 1px solid $color--border-accent;
+  border-radius: 3px;
+
+  width: 124px;
+  height: 62px;
+
   margin: 0;
+  margin-bottom: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+
+    width: 162px;
+    height: 77px;
+  }
+
+  @media (min-width: $desctop-width) {
+    margin-bottom: 60px;
+  }
 
   &--cost {
     @include font-accent-regular(14px, 20px);
+
+    border: none;
+    width: auto;
+    height: auto;
+
+    display: block;
+    margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      text-align: right;
+    }
   }
 }

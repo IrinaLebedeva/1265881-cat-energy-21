@@ -7,6 +7,22 @@
 
 .features__list {
   @include list-reset();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+.features__item {
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 25%;
+  }
 }
 
 .features__item:not(:last-child) {

@@ -14,7 +14,7 @@
   background-color: $background-color--accent;
   border: none;
 
-  @media ($tablet-width) {
+  @media (min-width: $tablet-width) {
     display: inline-block;
     width: initial;
   }

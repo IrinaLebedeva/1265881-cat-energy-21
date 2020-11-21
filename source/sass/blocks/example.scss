@@ -2,6 +2,15 @@
   background-color: $background-color--secondary-accent;
 
   padding-top: 27px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: $desctop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .example__title {
@@ -14,4 +23,21 @@
 .example__text {
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 436px;
+  }
+}
+
+.example__stats {
+  margin-bottom: 42px;
+}
+
+.example__slider {
+  padding-bottom: 31px;
 }
