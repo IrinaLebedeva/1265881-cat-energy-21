@@ -1,9 +1,20 @@
 .address {
   @include font-main(14px, 20px, $color--main);
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+
+    width: 160px;
+  }
 }
 
 .address__street {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .address__town {

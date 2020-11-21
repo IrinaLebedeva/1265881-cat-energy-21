@@ -7,14 +7,31 @@
 .tagline__title {
   @include font-accent-regular($font-size-h1--accent-regular, $line-height-h1--accent-regular, $color--accent);
 
+  text-align: center;
+
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-h1--accent-regular--tablet;
+    line-height: $line-height-h1--accent-regular--tablet;
+
+    text-align: left;
+  }
 }
 
 .tagline__text {
   @include font-accent-regular(14px, 14px, $color--accent);
   text-transform: uppercase;
+  text-align: center;
 
   padding: 0;
   padding-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: left;
+  }
 }

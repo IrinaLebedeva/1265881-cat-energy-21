@@ -9,4 +9,9 @@
   @include font-main(14px, 18px, $color--main);
 
   background-color: $background-color--main;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

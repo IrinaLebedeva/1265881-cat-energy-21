@@ -3,6 +3,11 @@
 
   margin: 0;
   margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-h2--accent-regular--tablet;
+    line-height: $line-height-h2--accent-regular--tablet;
+  }
 }
 
 .features__list {
@@ -16,6 +21,10 @@
 }
 
 .features__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: $tablet-width) {
     width: 50%;
   }
@@ -25,6 +34,8 @@
   }
 }
 
-.features__item:not(:last-child) {
-  margin-bottom: 20px;
+.features__text {
+  @media (min-width: $tablet-width) {
+    width: 245px;
+  }
 }
