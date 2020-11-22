@@ -22,10 +22,6 @@
   @media (min-width: $tablet-width) {
     margin-left: $container-padding--tablet;
   }
-
-  @media (min-width: $desctop-width) {
-    margin-left: 0;
-  }
 }
 
 .page-header__logo-text {
@@ -52,9 +48,5 @@
     justify-content: flex-end;
 
     margin-right: $container-padding--tablet;
-  }
-
-  @media (min-width: $desctop-width) {
-    margin-right: 0;
   }
 }

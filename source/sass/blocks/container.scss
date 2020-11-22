@@ -10,4 +10,14 @@
     margin: 0 auto;
     max-width: $desctop-max-width;
   }
+
+  &--narrow {
+    @media (min-width: $tablet-width) {
+      padding: 0 $container-padding--tablet + 40;
+    }
+
+    @media (min-width: $desctop-width) {
+      padding: 0 $container-padding--tablet;
+    }
+  }
 }

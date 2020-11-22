@@ -1,9 +1,27 @@
 .form-list {
   @include list-reset();
+
+  &--row {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 }
 
-.form-list .form-list__item:not(:last-child) {
+.form-list__item {
   margin-bottom: 13px;
+
+  &--row {
+    @media (min-width: $tablet-width) {
+      width: 50%;
+    }
+
+    @media (min-width: $desctop-width) {
+      width: 25%;
+    }
+  }
 }
 
 .form-list__label {
