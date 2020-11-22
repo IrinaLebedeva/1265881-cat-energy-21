@@ -1,7 +1,24 @@
 .cases__list {
   @include list-reset();
+
+  @media (min-width: $desctop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.cases__item {
+  @media (min-width: $desctop-width) {
+    width: 570px;
+  }
 }
 
 .cases__item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media (min-width: $desctop-width) {
+    margin-bottom: 0;
+  }
 }

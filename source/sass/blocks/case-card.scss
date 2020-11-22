@@ -5,6 +5,12 @@
   padding-right: 20px;
   padding-bottom: 18px;
   padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 53px;
+    padding-left: 53px;
+  }
 }
 
 .case-card__title {
@@ -13,6 +19,11 @@
 
   margin: 0;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .case-card__text {
@@ -21,10 +32,41 @@
   margin-bottom: 15px;
 
   border-bottom: 1px solid $color--border-main;
+
+  @media (min-width: $tablet-width) {
+    color: $color--secondary;
+  }
+
+  &--case-slim {
+    @media (min-width: $tablet-width) {
+      width: 377px;
+
+      border-bottom: none;
+    }
+    @media (min-width: $desctop-width) {
+      width: auto;
+    }
+  }
+
+  &--case-pro {
+    @media (min-width: $tablet-width) {
+      width: 342px;
+
+      border-bottom: none;
+    }
+    @media (min-width: $desctop-width) {
+      width: auto;
+    }
+  }
 }
 
 .case-card__link {
   @include font-accent-regular(16px, 16px, $color--secondary);
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

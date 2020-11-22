@@ -1,7 +1,13 @@
 .container {
-  max-width: $desctop-max-width;
+  min-width: 320px;
+  padding: 0 $container-padding;
 
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 20px;
+  @media (min-width: $tablet-width) {
+    padding: 0 $container-padding--tablet;
+  }
+
+  @media (min-width: $desctop-width) {
+    margin: 0 auto;
+    max-width: $desctop-max-width;
+  }
 }

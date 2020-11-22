@@ -27,7 +27,7 @@
   max-width: 187px;
   padding-bottom: 32px;
 
-  @media ($tablet-width) {
+  @media (min-width: $tablet-width) {
     max-width: $desctop-max-width;
   }
 }
@@ -39,7 +39,7 @@
 
 .form__input {
   border-width: 1px;
-  border-color: $form-input--border;
+  border-color: $color--border-input;
   border-style: solid;
   border-radius: 0;
 
@@ -57,7 +57,7 @@
   }
 
   &--accent {
-    border-color: $form-input--border-accent;
+    border-color: $color--border-accent;
   }
 
   &--text {
@@ -83,7 +83,7 @@
   display: block;
   text-align: center;
 
-  @media ($tablet-width) {
+  @media (min-width: $tablet-width) {
     display: inline-block;
   }
 }
