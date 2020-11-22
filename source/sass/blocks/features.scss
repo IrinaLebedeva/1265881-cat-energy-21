@@ -1,3 +1,13 @@
+.features {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $color--features-border;
+  }
+
+  @media (min-width: $desctop-width) {
+    border-bottom: 0;
+  }
+}
+
 .features__title {
   @include font-accent-regular($font-size-h2--accent-regular, $line-height-h2--accent-regular, $color--secondary);
 
