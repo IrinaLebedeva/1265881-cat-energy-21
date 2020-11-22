@@ -7,9 +7,31 @@
   flex-direction: column;
   flex-wrap: wrap;
 
+  @media (min-width: $tablet-width) {
+    background-color: $background-color--main;
+  }
+
   @media (min-width: $desctop-width) {
     flex-direction: row;
     justify-content: space-between;
+
+    margin: 0 auto;
+    max-width: $desctop-max-width;
+  }
+}
+
+.example__text-content {
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $container-padding--tablet;
+    padding-right: $container-padding--tablet;
+  }
+
+  @media (min-width: $desctop-width) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -40,4 +62,8 @@
 
 .example__slider {
   padding-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    background-color: $background-color--secondary-accent;
+  }
 }

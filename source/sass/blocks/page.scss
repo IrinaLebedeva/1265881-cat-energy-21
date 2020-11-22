@@ -6,6 +6,8 @@
   margin: 0;
   padding: 0;
 
+  min-width: 320px;
+
   @include font-main(14px, 18px, $color--main);
 
   background-color: $background-color--main;

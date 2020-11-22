@@ -60,6 +60,7 @@
   left: 24px;
 
   @media (min-width: $tablet-width) {
+    background-color: $background-color--main;
     font-size: 14px;
     line-height: 14px;
 

@@ -12,6 +12,7 @@
 
 .features__list {
   @include list-reset();
+  counter-reset: features-list-counter;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -27,6 +28,20 @@
 
   @media (min-width: $tablet-width) {
     width: 50%;
+    height: 280px;
+
+    position: relative;
+
+    &::before {
+      @include font-accent-regular(280px, 280px, $background-color--secondary);
+
+      content: counter(features-list-counter);
+      counter-increment: features-list-counter;
+
+      position: absolute;
+      top: 0;
+      left: 118px;
+    }
   }
 
   @media (min-width: $desctop-width) {
@@ -37,5 +52,8 @@
 .features__text {
   @media (min-width: $tablet-width) {
     width: 245px;
+
+    position: relative;
+    z-index: 1;
   }
 }

@@ -1,9 +1,9 @@
 .container {
   min-width: 320px;
-  padding: 0 20px;
+  padding: 0 $container-padding;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;
+    padding: 0 $container-padding--tablet;
   }
 
   @media (min-width: $desctop-width) {
