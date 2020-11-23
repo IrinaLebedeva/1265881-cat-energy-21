@@ -22,12 +22,50 @@
   @media (min-width: $desctop-width) {
     flex-direction: row;
     justify-content: space-between;
+
+    margin: 0 auto;
+    max-width: $desctop-max-width;
   }
 }
 
 .form__desctop-col {
+  min-width: 320px;
+  padding: 0 $container-padding;
+
   @media (min-width: $desctop-width) {
     width: 569px;
+  }
+
+  &--with-border {
+    border-bottom: 1px solid $color--border-main;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: 0;
+    }
+  }
+
+  &--left {
+    @media (min-width: $tablet-width) {
+      padding-left: $container-padding--tablet + 40;
+      padding-right: $container-padding--tablet + 40;
+    }
+
+    @media (min-width: $desctop-width) {
+      padding-left: $container-padding--tablet;
+      padding-right: 0;
+    }
+  }
+
+  &--right {
+    @media (min-width: $tablet-width) {
+      padding-left: $container-padding--tablet + 40;
+      padding-right: $container-padding--tablet + 40;
+    }
+
+    @media (min-width: $desctop-width) {
+      padding-right: $container-padding--tablet;
+      padding-left: 0;
+    }
   }
 }
 
@@ -41,23 +79,6 @@
 .form__fieldset {
   border: 0;
   padding: 0;
-  padding-bottom: 27px;
-
-  &--with-border {
-    border-top: 1px solid $color--border-main;
-    border-bottom: 1px solid $color--border-main;
-
-    padding-top: 20px;
-    padding-bottom: 22px;
-
-    margin-bottom: 26px;
-
-    @media (min-width: $tablet-width) {
-      border: 1px solid $color--border-input;
-
-      padding-left: 20px;
-    }
-  }
 }
 
 .form__legend {

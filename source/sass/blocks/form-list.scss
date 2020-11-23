@@ -8,6 +8,14 @@
       justify-content: space-between;
     }
   }
+
+  &--with-border {
+    @media (min-width: $tablet-width) {
+      border: 1px solid $color--border-input;
+
+      padding-left: 20px;
+    }
+  }
 }
 
 .form-list__item {
