@@ -13,7 +13,7 @@
 
   &--narrow {
     @media (min-width: $tablet-width) {
-      padding: 0 $container-padding--tablet + 40;
+      padding: 0 $container-padding--tablet + $container-padding-narrow--value;
     }
 
     @media (min-width: $desctop-width) {

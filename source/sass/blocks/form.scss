@@ -45,21 +45,25 @@
   }
 
   &--left {
+    margin-bottom: 25px;
+
     @media (min-width: $tablet-width) {
-      padding-left: $container-padding--tablet + 40;
-      padding-right: $container-padding--tablet + 40;
+      padding-left: $container-padding--tablet + $container-padding-narrow--value;
+      padding-right: $container-padding--tablet + $container-padding-narrow--value;
+      margin-bottom: 70px;
     }
 
     @media (min-width: $desctop-width) {
       padding-left: $container-padding--tablet;
       padding-right: 0;
+      margin-bottom: 0;
     }
   }
 
   &--right {
     @media (min-width: $tablet-width) {
-      padding-left: $container-padding--tablet + 40;
-      padding-right: $container-padding--tablet + 40;
+      padding-left: $container-padding--tablet + $container-padding-narrow--value;
+      padding-right: $container-padding--tablet + $container-padding-narrow--value;
     }
 
     @media (min-width: $desctop-width) {
@@ -79,16 +83,64 @@
 .form__fieldset {
   border: 0;
   padding: 0;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .form__legend {
-  @include font-accent-regular(24px, 26px, $color--secondary);
+  border-top: 2px solid $background-color--accent;
+  display: block;
+  width: 100%;
+}
 
-  max-width: 187px;
-  padding-bottom: 32px;
+.form__legend-text-container {
+  display: block;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding-left: $container-padding--tablet + $container-padding-narrow--value - $legend-padding-left--tablet;
+    padding-right: $container-padding--tablet + $container-padding-narrow--value - $legend-padding-right--tablet;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 1300px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.form__legend-text {
+  @include font-accent-regular(24px, 26px, $color--secondary);
+
+  display: inline-block;
+  position: relative;
+  background: $background-color--main;
+
+  margin: 0;
+  padding: 0;
+  padding-left: $container-padding;
+  padding-right: $legend-padding-right;
+
+  transform: translateY(-50%);
+
+  max-width: 187px + $container-padding + $legend-padding-right;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+
+    padding-left: $legend-padding-left--tablet;
+    padding-right: $legend-padding-right--tablet;
+  }
+
+  @media (min-width: $desctop-width) {
     max-width: $desctop-max-width;
+
+    padding-left: $legend-padding-left--desctop;
+    padding-right: $legend-padding-right--desctop;
   }
 }
 
