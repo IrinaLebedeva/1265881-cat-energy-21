@@ -1,3 +1,9 @@
+.page-footer {
+  &--inner {
+    background-color: $background-color--secondary;
+  }
+}
+
 .page-footer__contacts-wrapper {
   position: relative;
 }
@@ -14,12 +20,11 @@
   }
 
   &--inner {
-    padding-top: 28px;
-    padding-bottom: 22px;
-
-    margin-bottom: 0;
-
     background-color: $background-color--secondary;
+
+    @media (min-width: $desctop-width) {
+      background-color: $background-color--main;
+    }
   }
 }
 

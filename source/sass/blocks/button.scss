@@ -34,4 +34,17 @@
       padding: 14px 26px;
     }
   }
+
+  &--form {
+    @media (min-width: $tablet-width) {
+      width: 282px;
+
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    @media (min-width: $desctop-width) {
+      width: 568px;
+    }
+  }
 }
