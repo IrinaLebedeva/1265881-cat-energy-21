@@ -2,10 +2,23 @@
   @include font-accent-regular(24px, 24px, $color--secondary);
 }
 
+.other-products__wrapper {
+  @media (min-width: $desctop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .other-products__list {
   @include list-reset();
 
   margin-bottom: 30px;
+
+  @media (min-width: $desctop-width) {
+    flex-grow: 1;
+
+    margin-right: 79px;
+  }
 }
 
 .other-products__item {
@@ -16,8 +29,25 @@
   &:last-child {
     border-bottom: 1px solid #cdcdcd;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 26px;
+    padding-right: 37px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+  }
+
+  @media (min-width: $desctop-width) {
+    padding-right: 0;
+    padding-bottom: 17px;
+    padding-left: 0;
+  }
 }
 
 .other-products__tagline {
   margin-bottom: 35px;
+
+  @media (min-width: $desctop-width) {
+    width: 245px;
+  }
 }
