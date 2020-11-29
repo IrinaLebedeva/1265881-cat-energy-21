@@ -1,3 +1,13 @@
+.latest-products {
+  @media (min-width: $tablet-width) {
+    border: 2px solid $background-color--secondary;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .latest-products__title {
   @include font-accent-regular(16px, 20px, $color--main-secondary);
   text-transform: uppercase;
@@ -6,6 +16,19 @@
 
   margin: 0;
   margin-bottom: 8px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+
+    br {
+      display: unset;
+    }
+  }
 }
 
 .latest-products__text {
@@ -15,4 +38,18 @@
 
   margin: 0;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.latest-products__button-wrapper {
+  flex-grow: 1;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: end;
 }
