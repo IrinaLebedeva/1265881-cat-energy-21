@@ -1,5 +1,30 @@
+.other-products__title-wrapper {
+  border-top: 2px solid $background-color--accent;
+}
+
 .other-products__title {
   @include font-accent-regular(24px, 24px, $color--secondary);
+
+  display: inline-block;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 $container-padding;
+
+  background-color: $background-color--main;
+
+  transform: translateY(-75%);
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+
+    padding: 0 37px;
+  }
+
+  @media (min-width: $desctop-width) {
+    padding: 0 35px 0 40px;
+  }
 }
 
 .other-products__wrapper {

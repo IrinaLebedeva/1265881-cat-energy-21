@@ -20,4 +20,17 @@
       padding: 0 $container-padding--tablet;
     }
   }
+
+  &--title-wrapper {
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 $container-padding--tablet;
+    }
+
+    @media (min-width: $desctop-width) {
+      padding: 0;
+      max-width: 1300px;
+    }
+  }
 }
