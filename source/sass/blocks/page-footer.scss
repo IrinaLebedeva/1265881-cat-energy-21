@@ -11,7 +11,7 @@
 .page-footer__contacts {
   background-color: $background-color--main;
 
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
   @media (min-width: $desctop-width) {
     position: absolute;
@@ -29,13 +29,12 @@
 }
 
 .page-footer__map-wrapper {
-  background-color: $background-color--secondary-accent;
+  background-color: $background-color--secondary;
+}
 
-  height: 362px;
-
-  @media (min-width: $tablet-width) {
-    height: 400px;
-  }
+.page-footer__map {
+  width: 100%;
+  object-fit: cover;
 }
 
 .page-footer__bottom {

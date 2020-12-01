@@ -39,7 +39,7 @@
   @include font-accent-regular($font-size-h2--accent-regular, $line-height-h2--accent-regular, $color--secondary);
 
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
     font-size: $font-size-h2--accent-regular--tablet;

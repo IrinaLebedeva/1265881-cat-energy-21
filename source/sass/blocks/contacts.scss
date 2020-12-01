@@ -13,7 +13,7 @@
 }
 
 .contacts__headline {
-  @include font-accent-regular(16px, 18px, $color--main-secondary);
+  @include font-accent-regular(16px, 20px, $color--main-secondary);
   text-transform: uppercase;
 
   width: 140px;

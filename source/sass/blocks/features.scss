@@ -1,6 +1,6 @@
 .features {
   @media (min-width: $tablet-width) {
-    border-bottom: 1px solid $color--features-border;
+    border-bottom: 1px solid $color--border-secondary;
   }
 
   @media (min-width: $desctop-width) {
@@ -33,7 +33,7 @@
 
 .features__item {
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   @media (min-width: $tablet-width) {
@@ -60,10 +60,65 @@
 }
 
 .features__text {
+  margin: 0;
+
+  padding-left: 80px;
+  padding-top: 7px;
+
+  position: relative;
+
   @media (min-width: $tablet-width) {
     width: 245px;
 
     position: relative;
     z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+
+    background-color: $background-color--accent;
+
+    position: absolute;
+    left: 0;
+    top: 6px;
+  }
+
+  &--icon-leaf::after {
+    @include pseudo(url("../img/icon-leaf.svg"));
+    width: 30px;
+    height: 32px;
+
+    left: 15px;
+    top: 20px;
+  }
+
+  &--icon-glass::after {
+    @include pseudo(url("../img/icon-glass.svg"));
+    width: 29px;
+    height: 31px;
+
+    left: 15px;
+    top: 19px;
+  }
+
+  &--icon-cutlery::after {
+    @include pseudo(url("../img/icon-cutlery.svg"));
+    width: 25px;
+    height: 30px;
+
+    left: 18px;
+    top: 21px;
+  }
+
+  &--icon-clock::after {
+    @include pseudo(url("../img/icon-clock.svg"));
+    width: 32px;
+    height: 33px;
+
+    left: 14px;
+    top: 19px;
   }
 }

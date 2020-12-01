@@ -1,7 +1,7 @@
 .case-card {
   background-color: $background-color--secondary;
 
-  padding-top: 30px;
+  padding-top: 29px;
   padding-right: 20px;
   padding-bottom: 18px;
   padding-left: 20px;
@@ -18,18 +18,53 @@
   text-transform: uppercase;
 
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
+  padding-left: 71px;
+
+  position: relative;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
   }
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+
+    background-color: $background-color--accent;
+    border-radius: 50%;
+
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: -5px;
+  }
+
+  &--case-slim::after {
+    @include pseudo(url("../img/cat-slim.svg"));
+    width: 50px;
+    height: 53px;
+
+    left: 9px;
+    top: -8px;
+  }
+
+  &--case-pro::after {
+    @include pseudo(url("../img/cat-pro.svg"));
+    width: 67px;
+    height: 28px;
+
+    left: -7px;
+    top: 5px;
+  }
 }
 
 .case-card__text {
-  padding-bottom: 23px;
+  padding-bottom: 22px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 
   border-bottom: 1px solid $color--border-main;
 

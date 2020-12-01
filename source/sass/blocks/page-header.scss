@@ -3,6 +3,9 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+  padding-top: 12px;
 
   @media (min-width: $tablet-width) {
     justify-content: unset;
@@ -37,9 +40,11 @@
 }
 
 .page-header__main-nav {
+  margin-top: 12px;
   width: 100%;
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     width: unset;
 
     flex-grow: 1;

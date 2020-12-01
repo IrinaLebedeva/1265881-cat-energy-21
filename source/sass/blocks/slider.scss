@@ -2,8 +2,19 @@
   @include list-reset();
 }
 
+.slider__item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
 .slider__toggles-list {
   text-align: center;
+
+  margin-top: 29px;
+  margin-bottom: 4px;
 }
 
 .slider__toggles-item {
