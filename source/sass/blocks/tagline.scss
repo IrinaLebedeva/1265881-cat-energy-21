@@ -3,6 +3,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     background-image: unset;
   }
@@ -83,11 +87,10 @@
   position: absolute;
   top: -135px;
 
-  height: 270px;
+  height: auto;
   width: 280px;
 
   @media (min-width: $tablet-width) {
-    height: 609px;
     width: 709px;
 
     position: relative;
@@ -95,7 +98,7 @@
   }
 
   @media (min-width: $desctop-width) {
-    height: 499px;
+    width: 552px;
 
     top: 0;
     right: 0;

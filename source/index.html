@@ -44,7 +44,11 @@
         <div class="tagline__footer-wrapper">
           <div class="container">
             <div class="tagline__image-wrapper">
-                <img class="tagline__image" src="img/cat-energy-pro--500-chicken-tagline.png" width="280" height="270" alt="Изображение куриного корма для котов">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/cat-energy-pro--500-chicken-tagline-desctop.png 1x, img/cat-energy-pro--500-chicken-tagline-desctop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/cat-energy-pro--500-chicken-tagline-tablet.jpg 1x, img/cat-energy-pro--500-chicken-tagline-tablet@2x.jpg 2x">
+                <img class="tagline__image" src="img/cat-energy-pro--500-chicken-tagline-mobile.png" srcset="img/cat-energy-pro--500-chicken-tagline-mobile@2x.png 2x" width="280" height="270" alt="Изображение куриного корма для котов">
+              </picture>
             </div>
             <a class="tagline__button button button--tagline" href="form.html">Подобрать программу</a>
           </div>
@@ -104,10 +108,10 @@
         <div class="example__slider slider">
           <ul class="slider__list">
             <li class="slider__item slider__item--active">
-              <img src="img/example-cat-before.png" width="311" height="232" alt="Фотография кота до программы похудения">
+              <img src="img/example-cat-before-mobile.png" srcset="img/example-cat-before-mobile@2x.png 2x" width="311" height="232" alt="Фотография кота до программы похудения">
             </li>
             <li class="slider__item">
-              <img src="img/example-cat-after.png" width="251" height="240" alt="Фотография кота после программы похудения">
+              <img src="img/example-cat-after-mobile.png" srcset="img/example-cat-after-mobile@2x.png 2x" width="251" height="240" alt="Фотография кота после программы похудения">
             </li>
           </ul>
           <p class="slider__toggles-list">
