@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 39px;
+  padding-top: 35px;
   padding-bottom: 22px;
 
   display: flex;
@@ -13,23 +13,28 @@
 }
 
 .footer__logo-link-wrapper {
-  background-color: #ffffff;
-
   text-align: center;
   border-bottom: 1px solid $color--border-main;
+
+  padding-bottom: 27px;
 
   @media (min-width: $tablet-width) {
     border-bottom: 0;
   }
 }
 
-.footer__social {
-  background-color: #ffffff;
+.footer__logo-link {
+  color: $color--logo;
+}
 
+.footer__social {
   display: flex;
   justify-content: center;
 
   border-bottom: 1px solid $color--border-main;
+
+  padding-top: 21px;
+  padding-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     border-bottom: 0;
@@ -37,8 +42,8 @@
 }
 
 .footer__copyright {
-  background-color: #ffffff;
-
   display: flex;
   justify-content: space-between;
+
+  padding-top: 22px;
 }

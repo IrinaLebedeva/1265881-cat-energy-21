@@ -83,27 +83,33 @@
   }
 }
 
-.tagline__image {
+.tagline__image-container {
   position: absolute;
   top: -135px;
 
-  height: auto;
-  width: 280px;
-
   @media (min-width: $tablet-width) {
-    width: 709px;
-
     position: relative;
     top: 0;
   }
 
   @media (min-width: $desctop-width) {
-    width: 552px;
-
     top: 0;
     right: 0;
     bottom: unset;
     left: unset;
+  }
+}
+
+.tagline__image {
+  height: auto;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 709px;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 499px;
   }
 }
 

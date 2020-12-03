@@ -1,4 +1,14 @@
-.copyright__text {
+.copyright__link {
   @include font-main(16px, 18.4px, $color--main);
   text-decoration: none;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__icon {
+  color: $color--icon;
 }

@@ -102,8 +102,39 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  position: relative;
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    $size: 6px;
+
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color--secondary;
+    margin-right: -$size;
+
+    right: -32px;
+    bottom: 6px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    right: -35px;
+    bottom: 11px;
+
+    width: 20px;
+    height: 2px;
+    background-color: $color--secondary;
   }
 }
