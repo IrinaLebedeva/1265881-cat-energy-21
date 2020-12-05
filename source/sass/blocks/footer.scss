@@ -1,14 +1,10 @@
 .footer {
-  padding-top: 35px;
-  padding-bottom: 22px;
-
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -20,6 +16,9 @@
 
   @media (min-width: $tablet-width) {
     border-bottom: 0;
+
+    padding-bottom: 0;
+    margin-right: 40px;
   }
 }
 
@@ -37,7 +36,12 @@
   padding-bottom: 5px;
 
   @media (min-width: $tablet-width) {
+    flex-grow: 1;
+
     border-bottom: 0;
+
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -46,4 +50,10 @@
   justify-content: space-between;
 
   padding-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    margin-top: -16px;
+    margin-left: 16px;
+  }
 }

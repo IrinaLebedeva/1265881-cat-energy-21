@@ -10,6 +10,14 @@
   @media (min-width: $tablet-width) {
     border-top: 0;
   }
+
+  &--closed {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
 }
 
 .nav-list__item {
@@ -32,7 +40,7 @@
 
 .nav-list__item:not(:last-child) {
   @media (min-width: $tablet-width) {
-    margin-right: 34px;
+    margin-right: 35px;
   }
 }
 
@@ -44,8 +52,9 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
+    font-weight: normal;
 
-    padding-bottom: 10px;
+    padding-bottom: 8px;
   }
 
   &--active {

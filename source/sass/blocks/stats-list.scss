@@ -29,11 +29,13 @@
 
     @media (min-width: $tablet-width) {
       flex-direction: column;
+      justify-content: flex-start;
 
       width: auto;
 
       margin-right: 0;
       margin-left: auto;
+      margin-top: 12px;
     }
 
     @media (min-width: $desctop-width) {
@@ -91,6 +93,8 @@
 
       margin-right: 0;
       margin-bottom: 9px;
+
+      padding: 0;
     }
 
     @media (min-width: $desctop-width) {
@@ -117,17 +121,19 @@
 
   margin: 0;
   margin-bottom: 34px;
+  padding-top: 12px;
 
   display: flex;
   justify-content: center;
-  align-items: center;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
 
     width: 162px;
-    height: 77px;
+    height: 72px;
+
+    padding-top: 14px;
   }
 
   @media (min-width: $desctop-width) {
@@ -143,6 +149,7 @@
 
     display: block;
     margin-bottom: 0;
+    padding-top: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 20px;

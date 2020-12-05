@@ -1,15 +1,16 @@
 .case-card {
   background-color: $background-color--secondary;
 
-  padding-top: 29px;
+  padding-top: 30px;
   padding-right: 20px;
   padding-bottom: 18px;
   padding-left: 20px;
 
   @media (min-width: $tablet-width) {
     padding-top: 77px;
-    padding-bottom: 53px;
+    padding-bottom: 56px;
     padding-left: 53px;
+    padding-right: 62px;
   }
 }
 
@@ -26,6 +27,9 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
+
+    margin-bottom: 24px;
+    padding-left: 0;
   }
 
   &::before {
@@ -39,25 +43,52 @@
     display: inline-block;
     position: absolute;
     left: 2px;
-    top: -5px;
+    top: -6px;
+
+    @media (min-width: $tablet-width) {
+      left: unset;
+      top: 15px;
+      right: 0;
+
+      width: 200px;
+      height: 200px;
+    }
   }
 
   &--case-slim::after {
-    @include pseudo(url("../img/cat-slim.svg"));
+    @include pseudo-bg-image(url("../img/cat-slim.svg"));
     width: 50px;
-    height: 53px;
+    height: 50px;
 
     left: 9px;
-    top: -8px;
+    top: -9px;
+
+    @media (min-width: $tablet-width) {
+      left: unset;
+      right: 29px;
+      top: 4px;
+
+      width: 140px;
+      height: 192px;
+    }
   }
 
   &--case-pro::after {
-    @include pseudo(url("../img/cat-pro.svg"));
+    @include pseudo-bg-image(url("../img/cat-pro.svg"));
     width: 67px;
     height: 28px;
 
     left: -7px;
     top: 5px;
+
+    @media (min-width: $tablet-width) {
+      left: unset;
+      right: -34px;
+      top: 59px;
+
+      width: 268px;
+      height: 200px;
+    }
   }
 }
 
@@ -70,29 +101,16 @@
 
   @media (min-width: $tablet-width) {
     color: $color--secondary;
-  }
 
-  &--case-slim {
-    @media (min-width: $tablet-width) {
-      width: 377px;
+    padding-right: 220px;
+    margin-bottom: 30px;
 
-      border-bottom: none;
-    }
-
-    @media (min-width: $desctop-width) {
-      width: auto;
-    }
+    border-bottom: 0;
   }
 
   &--case-pro {
     @media (min-width: $tablet-width) {
-      width: 342px;
-
-      border-bottom: none;
-    }
-
-    @media (min-width: $desctop-width) {
-      width: auto;
+      padding-right: 250px;
     }
   }
 }
@@ -123,6 +141,11 @@
 
     right: -32px;
     bottom: 6px;
+
+    @media (min-width: $tablet-width) {
+      right: -41px;
+      bottom: 9px;
+    }
   }
 
   &::before {
@@ -136,5 +159,12 @@
     width: 20px;
     height: 2px;
     background-color: $color--secondary;
+
+    @media (min-width: $tablet-width) {
+      right: -41px;
+      bottom: 14px;
+
+      width: 17px;
+    }
   }
 }

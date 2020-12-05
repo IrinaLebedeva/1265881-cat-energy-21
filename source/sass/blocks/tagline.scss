@@ -9,13 +9,14 @@
 
   @media (min-width: $tablet-width) {
     background-image: unset;
+    margin-left: 87px;
   }
 }
 
 .tagline__header {
   background-color: $background-color--tagline;
 
-  padding-top: 27px;
+  padding-top: 26px;
   padding-bottom: 135px;
 
   @media (min-width: $tablet-width) {
@@ -47,7 +48,7 @@
     text-align: left;
 
     width: 414px;
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 }
 
@@ -68,6 +69,10 @@
 
     margin-bottom: 20px;
   }
+}
+
+.tagline__footer-wrapper {
+  position: relative;
 }
 
 .tagline__image-wrapper {
@@ -117,7 +122,9 @@
   margin-top: 3px;
 
   @media (min-width: $tablet-width) {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 29px;
 
     margin-top: 29px;
     margin-left: 83px;

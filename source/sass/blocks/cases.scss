@@ -18,6 +18,10 @@
 .cases__item:not(:last-child) {
   margin-bottom: 20px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
   @media (min-width: $desctop-width) {
     margin-bottom: 0;
   }

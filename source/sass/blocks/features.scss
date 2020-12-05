@@ -17,6 +17,8 @@
   @media (min-width: $tablet-width) {
     font-size: $font-size-h2--accent-regular--tablet;
     line-height: $line-height-h2--accent-regular--tablet;
+
+    margin-bottom: 42px;
   }
 }
 
@@ -37,10 +39,20 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+    width: 245px;
     height: 280px;
 
+    margin-top: 25px;
+
     position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &:nth-child(2n+1) {
+      margin-right: 139px;
+    }
 
     &::before {
       @include font-accent-regular(280px, 280px, $background-color--secondary);
@@ -49,8 +61,20 @@
       counter-increment: features-list-counter;
 
       position: absolute;
-      top: 0;
+      top: -34px;
+      left: 112px;
+    }
+
+    &:nth-child(1)::before {
       left: 118px;
+    }
+  }
+
+  @media (min-width: $tablet-width + 1) {
+    width: 50%;
+
+    &:nth-child(2n+1) {
+      margin-right: 0;
     }
   }
 
@@ -73,6 +97,9 @@
 
     position: relative;
     z-index: 1;
+
+    padding-left: 0;
+    padding-top: 116px;
   }
 
   &::before {
@@ -84,7 +111,12 @@
 
     position: absolute;
     left: 0;
-    top: 6px;
+    top: 5px;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--icon-leaf::after {
@@ -94,6 +126,11 @@
 
     left: 15px;
     top: 20px;
+
+    @media (min-width: $tablet-width) {
+      left: 24px;
+      top: 30px;
+    }
   }
 
   &--icon-glass::after {
@@ -103,6 +140,11 @@
 
     left: 15px;
     top: 19px;
+
+    @media (min-width: $tablet-width) {
+      left: 25px;
+      top: 29px;
+    }
   }
 
   &--icon-cutlery::after {
@@ -112,6 +154,11 @@
 
     left: 18px;
     top: 21px;
+
+    @media (min-width: $tablet-width) {
+      left: 28px;
+      top: 30px;
+    }
   }
 
   &--icon-clock::after {
@@ -121,5 +168,10 @@
 
     left: 14px;
     top: 19px;
+
+    @media (min-width: $tablet-width) {
+      left: 24px;
+      top: 28px;
+    }
   }
 }

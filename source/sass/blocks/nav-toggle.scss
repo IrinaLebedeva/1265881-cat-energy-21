@@ -14,7 +14,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: -1px;
     right: 0;
 
     height: 2px;
@@ -22,5 +22,28 @@
 
     background-color: $color--secondary;
     box-shadow: 0 8px 0 0 $color--secondary, 0 16px 0 0 $color--secondary;
+  }
+}
+
+.nav-toggle--opened {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+
+    height: 2px;
+    width: 24px;
+
+    background-color: $color--secondary;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }

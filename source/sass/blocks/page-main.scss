@@ -1,17 +1,31 @@
+.page-main {
+  @media (min-width: $tablet-width) {
+    margin-top: 25px;
+  }
+}
+
 .page-main__tagline {
   margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -6px;
+  }
 }
 
 .page-main__cases {
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
 }
 
 .page-main__features {
   margin-bottom: 46px;
-}
 
-.page-main__example {
-  margin-bottom: 28px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 41px;
+  }
 }
 
 .page-main__title {

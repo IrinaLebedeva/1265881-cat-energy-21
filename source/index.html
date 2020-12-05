@@ -8,17 +8,20 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo-img">
-        <img src="img/page-header__logo-img.svg" width="33" height="37" alt="Кэт энерджи - логотип с картинкой кота">
+      <a class="page-header__logo-img-wrapper">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/page-header__logo-img--tablet.svg">
+          <img class="page-header__logo-img" src="img/page-header__logo-img.svg" width="33" height="37" alt="Кэт энерджи - логотип с картинкой кота">
+        </picture>
       </a>
       <a class="page-header__logo-text">
         <img src="img/page-header__logo-text.svg" width="101" height="18" alt="Кэт энерджи - текстовый логотип">
       </a>
-      <button class="page-header__main-nav-toggle nav-toggle nav-toggle--closed" type="button">
+      <button class="page-header__main-nav-toggle nav-toggle nav-toggle--opened" type="button"><!--nav-toggle--closed-->
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <nav class="page-header__main-nav">
-        <ul class="nav-list">
+        <ul class="nav-list"><!--nav-list--closed-->
           <li class="nav-list__item">
             <a class="nav-list__link nav-list__link--active">Главная</a>
           </li>
@@ -66,7 +69,7 @@
           </li>
           <li class="cases__item case-card">
             <h3 class="case-card__title case-card__title--case-pro">Набор массы</h3>
-            <p class="case-card__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <p class="case-card__text case-card__text--case-pro">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="case-card__link" href="catalog.html#pro">Каталог pro</a>
           </li>
         </ul>
@@ -84,7 +87,7 @@
             <p class="features__text features__text--icon-cutlery">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="features__item">
-            <p class="features__text features__text--icon-clock">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="features__text features__text--icon-clock">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
           </li>
         </ol>
       </section>
@@ -108,12 +111,18 @@
           </dl>
         </div>
         <div class="example__slider slider">
-          <ul class="slider__list">
+          <ul class="slider__list-wrapper slider__list">
             <li class="slider__item slider__item--active">
-              <img src="img/example-cat-before-mobile.png" srcset="img/example-cat-before-mobile@2x.png 2x" width="311" height="232" alt="Фотография кота до программы похудения">
+              <picture>
+                <source media="(min-width: 768px" srcset="img/example-cat-before-tablet.png 1x, img/example-cat-before-tablet@2x.png 2x">
+                <img class="slider__img" src="img/example-cat-before-mobile.png" srcset="img/example-cat-before-mobile@2x.png 2x" width="311" height="232" alt="Фотография кота до программы похудения">
+              </picture>
             </li>
             <li class="slider__item">
-              <img src="img/example-cat-after-mobile.png" srcset="img/example-cat-after-mobile@2x.png 2x" width="251" height="240" alt="Фотография кота после программы похудения">
+              <picture>
+                <source media="(min-width: 768px" srcset="img/example-cat-after-tablet.png 1x, img/example-cat-after-tablet@2x.png 2x">
+                <img class="slider__img" src="img/example-cat-after-mobile.png" srcset="img/example-cat-after-mobile@2x.png 2x" width="251" height="240" alt="Фотография кота после программы похудения">
+              </picture>
             </li>
           </ul>
           <p class="slider__toggles-list">
@@ -124,8 +133,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="container">
-      <div class="page-footer__contacts-wrapper">
+      <div class="container page-footer__contacts-wrapper">
         <div class="page-footer__contacts">
           <div class="contacts">
             <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -138,7 +146,6 @@
             </div>
           </div>
         </div>
-      </div>
       </div>
       <div class="page-footer__map-wrapper">
         <picture>

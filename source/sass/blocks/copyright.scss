@@ -7,8 +7,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  white-space: nowrap;
 }
 
 .copyright__icon {
   color: $color--icon;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 24px;
+  }
 }
