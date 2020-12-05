@@ -13,9 +13,9 @@
     padding: 0 $container-padding--tablet;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0 auto;
-    max-width: $desctop-max-width;
+    max-width: $desktop-max-width;
 
     grid-template-columns: auto auto auto auto;
   }
@@ -52,7 +52,7 @@
     }
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     &:nth-child(n) {
       margin-right: 80px;
     }

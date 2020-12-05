@@ -3,7 +3,7 @@
     border-bottom: 1px solid $color--border-secondary;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     border-bottom: 0;
   }
 }
@@ -78,7 +78,7 @@
     }
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     width: 25%;
   }
 }
