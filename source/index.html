@@ -5,37 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи: главная</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Pixel Glass -->
-    <style>
-      html {
-        background-repeat: no-repeat;
-        background-position: 50% -198px;
-        background-image: url("/img/pixel-glass/index-mobile-closed-menu.jpg");
-
-        /*background-position: 50% 0;
-        background-image: url("/img/pixel-glass/index-mobile.jpg");*/
-      }
-      @media (min-width: 768px) {
-        html {
-          background-position: 50% 0;
-          background-image: url("/img/pixel-glass/index-tablet.jpg");
-        }
-      }
-      @media (min-width: 1440px) {
-        html {
-          background-image: url("/img/pixel-glass/index-desktop.jpg");
-        }
-      }
-
-      body {
-        opacity: 0.7;
-      }
-    </style>
-
-    <link rel="stylesheet" href="/img/pixel-glass/styles.css">
-    <script src="/img/pixel-glass/script.js"></script>
-    <!-- // Pixel Glass -->
-
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -172,6 +141,7 @@
             </ul>
             <p class="slider__toggles-list">
               <button class="slider__toggles-item slider__toggles-item--before slider__toggles-item--active" type="button">Было</button>
+              <span class="slider__track slider__track--active-before"></span><!--slider__track--active-after-->
               <button class="slider__toggles-item slider__toggles-item--after" type="button">Стало</button>
             </p>
           </div>

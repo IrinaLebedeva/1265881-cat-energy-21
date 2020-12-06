@@ -24,6 +24,8 @@
 
 .slider__list {
   @include list-reset();
+
+  min-height: 230px;
 }
 
 .slider__item {
@@ -75,5 +77,41 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 21px;
+  }
+}
+
+.slider__track {
+  width: 84px;
+  height: 14px;
+
+  display: inline-block;
+  position: relative;
+
+  background-color: $background-color--main;
+
+  border: 1px solid $color--border-accent;
+  border-radius: 6px;
+
+  margin-left: 8px;
+  margin-right: 3px;
+
+  &::before {
+    @include pseudo();
+    position: absolute;
+    top: 3px;
+    width: 35px;
+    height: 6px;
+
+    background-color: $background-color--accent;
+
+    border-radius: 6px;
+  }
+
+  &--active-before::before {
+    left: 4px;
+  }
+
+  &--active-after::before {
+    right: 4px;
   }
 }
