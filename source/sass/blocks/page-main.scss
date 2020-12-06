@@ -58,6 +58,8 @@
   position: relative;
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 17px;
+
     &::after {
       @include pseudo();
 

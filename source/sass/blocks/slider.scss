@@ -42,10 +42,14 @@
   margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 
     position: relative;
     z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
   }
 }
 
@@ -64,6 +68,11 @@
 
   position: relative;
   z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-left: 76px;
+  }
 }
 
 .slider__toggles-item {
@@ -71,12 +80,17 @@
   text-transform: uppercase;
 
   background-color: transparent;
-
   border: none;
+  padding: 0;
+
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 21px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    padding-bottom: 5px;
   }
 }
 
@@ -92,8 +106,21 @@
   border: 1px solid $color--border-accent;
   border-radius: 6px;
 
-  margin-left: 8px;
-  margin-right: 3px;
+  margin-left: 14px;
+  margin-right: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+
+    border: 0;
+    border-radius: 6px;
+    background-color: $color--slider-track;
+
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-bottom: 6px;
+  }
 
   &::before {
     @include pseudo();
@@ -105,6 +132,10 @@
     background-color: $background-color--accent;
 
     border-radius: 6px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &--active-before::before {
@@ -113,5 +144,25 @@
 
   &--active-after::before {
     right: 4px;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include pseudo();
+      position: absolute;
+      top: -13px;
+      left: 200px;
+
+      width: 33px;
+      height: 33px;
+
+      background-color: $background-color--accent;
+
+      border: 14px solid $background-color--main;
+      border-radius: 50%;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+
+      cursor: pointer;
+    }
   }
 }

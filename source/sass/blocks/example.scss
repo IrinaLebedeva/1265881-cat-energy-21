@@ -83,10 +83,11 @@
   padding-bottom: 31px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 68px;
+    padding-bottom: 63px;
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 32px;
+    margin-top: -55px;
   }
 }
