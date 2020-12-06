@@ -14,6 +14,12 @@
       z-index: 0;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      height: 0;
+    }
+  }
 }
 
 .slider__list {
@@ -62,7 +68,7 @@
   @include font-accent-regular(16px, 20px, $color--secondary);
   text-transform: uppercase;
 
-  background-color: $background-color--secondary-accent;
+  background-color: transparent;
 
   border: none;
 

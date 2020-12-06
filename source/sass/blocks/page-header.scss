@@ -15,7 +15,7 @@
     margin: 0 auto;
     max-width: $desktop-max-width;
 
-    padding-top: 50px;
+    padding-top: 48px;
   }
 }
 
@@ -24,6 +24,10 @@
 
   @media (min-width: $tablet-width) {
     margin-left: $container-padding--tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 2px;
   }
 }
 
@@ -36,7 +40,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 174px;
+    width: 202px;
   }
 }
 
@@ -77,5 +81,9 @@
     justify-content: flex-end;
 
     margin-right: $container-padding--tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 32px;
   }
 }

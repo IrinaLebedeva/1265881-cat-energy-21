@@ -11,6 +11,39 @@
     border-top: 0;
   }
 
+  @media (min-width: $desktop-width) {
+    max-width: 500px;
+  }
+
+  &::after,
+  &::before {
+    @media (min-width: $desktop-width) {
+      @include pseudo();
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 694px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      background-color: $background-color--tagline;
+    }
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/index-background-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+    }
+  }
+
   &--closed {
     display: none;
 
@@ -36,6 +69,10 @@
     display: inline-block;
     width: unset;
   }
+
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+  }
 }
 
 .nav-list__item:not(:last-child) {
@@ -57,9 +94,21 @@
     padding-bottom: 8px;
   }
 
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color--accent;
+  }
+
   &--active {
     @media (min-width: $tablet-width) {
-      border-bottom: 2px solid $background-color--accent;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-bottom-color: $background-color--accent;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-bottom-color: $color--accent;;
     }
   }
 }

@@ -12,6 +12,10 @@
     padding-left: 53px;
     padding-right: 62px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 55px;
+  }
 }
 
 .case-card__title {
@@ -30,6 +34,11 @@
 
     margin-bottom: 24px;
     padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+    margin-bottom: 74px;
   }
 
   &::before {
@@ -53,6 +62,15 @@
       width: 200px;
       height: 200px;
     }
+
+    @media (min-width: $desktop-width) {
+      right: unset;
+      top: -31px;
+      left: 0;
+
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &--case-slim::after {
@@ -71,6 +89,15 @@
       width: 140px;
       height: 192px;
     }
+
+    @media (min-width: $desktop-width) {
+      right: unset;
+      top: -36px;
+      left: 14px;
+
+      width: 70px;
+      height: 97px;
+    }
   }
 
   &--case-pro::after {
@@ -88,6 +115,15 @@
 
       width: 268px;
       height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: unset;
+      top: -11px;
+      left: -20px;
+
+      width: 134px;
+      height: 56px;
     }
   }
 }
@@ -108,9 +144,18 @@
     border-bottom: 0;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+
   &--case-pro {
     @media (min-width: $tablet-width) {
       padding-right: 250px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 0;
     }
   }
 }
@@ -146,6 +191,11 @@
       right: -41px;
       bottom: 9px;
     }
+
+    @media (min-width: $desktop-width) {
+      right: -44px;
+      bottom: 10px;
+    }
   }
 
   &::before {
@@ -165,6 +215,11 @@
       bottom: 14px;
 
       width: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -44px;
+      bottom: 15px;
     }
   }
 }

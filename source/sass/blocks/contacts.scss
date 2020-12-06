@@ -1,8 +1,8 @@
 .contacts {
   @media (min-width: $desktop-width) {
     padding-top: 66px;
-    padding-right: 89px;
-    padding-bottom: 59px;
+    padding-right: 84px;
+    padding-bottom: 57px;
     padding-left: 76px;
   }
 }
@@ -27,5 +27,9 @@
     width: 170px;
     min-width: 170px;
     margin-right: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 80px;
   }
 }
