@@ -42,6 +42,10 @@
 
 .page-footer__map-wrapper {
   background-color: $background-color--secondary;
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
 }
 
 .page-footer__map {
