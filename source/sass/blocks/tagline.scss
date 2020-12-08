@@ -103,6 +103,12 @@
   }
 }
 
+.tagline__footer-container {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
 .tagline__image-wrapper {
   position: relative;
 
@@ -117,8 +123,8 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 0;
-    right: 22.9%;
+    top: -283px;
+    left: 478px;
   }
 }
 
