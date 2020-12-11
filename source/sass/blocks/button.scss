@@ -14,6 +14,16 @@
   background-color: $background-color--accent;
   border: none;
 
+  &:hover,
+  &:focus {
+    background-color: $background-color--button-focus;
+  }
+
+  &:active {
+    background-color: $background-color--button-focus;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     display: inline-block;
     width: unset;
@@ -26,6 +36,16 @@
 
     display: block;
     width: 100%;
+
+    &:hover,
+    &:focus {
+      background-color: $background-color--button-secondary-focus;
+    }
+
+    &:active {
+      background-color: $background-color--button-secondary-focus;
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--tagline {
