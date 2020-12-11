@@ -29,6 +29,16 @@
   align-items: center;
   height: 100%;
 
+  &:hover,
+  &:focus {
+    color: $background-color--accent;
+  }
+
+  &:active {
+    color: $background-color--accent;
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: flex-end;
