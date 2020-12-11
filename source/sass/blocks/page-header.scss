@@ -22,6 +22,15 @@
 .page-header__logo-img-wrapper {
   margin-left: $container-padding;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: $container-padding--tablet;
   }
@@ -53,6 +62,15 @@
   padding-left: 49px;
   padding-right: 57px;
   padding-top: 5px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
