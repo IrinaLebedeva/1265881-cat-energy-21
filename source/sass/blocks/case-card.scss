@@ -177,49 +177,41 @@
     display: block;
     position: absolute;
 
-    $size: 6px;
+    width: 32px;
+    height: 11px;
 
-    border-top: $size solid transparent;
-    border-bottom: $size solid transparent;
-    border-left: $size solid $color--secondary;
-    margin-right: -$size;
+    background-image: url("../img/icon-arrow.svg");
 
-    right: -32px;
-    bottom: 6px;
+    background-position-x: -9px;
+    background-repeat: no-repeat;
+
+    right: -48px;
+    bottom: 8px;
+
+    transition: background-position-x 0.2s ease-out 0.1s;
 
     @media (min-width: $tablet-width) {
-      right: -41px;
-      bottom: 9px;
+      right: -57px;
+      bottom: 10px;
     }
 
     @media (min-width: $desktop-width) {
-      right: -44px;
-      bottom: 10px;
+      right: -60px;
     }
   }
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-
-    right: -35px;
-    bottom: 11px;
-
-    width: 20px;
-    height: 2px;
-    background-color: $color--secondary;
-
-    @media (min-width: $tablet-width) {
-      right: -41px;
-      bottom: 14px;
-
-      width: 17px;
+  &:hover,
+  &:focus {
+    &::after {
+      background-position-x: -1px;
     }
+  }
 
-    @media (min-width: $desktop-width) {
-      right: -44px;
-      bottom: 15px;
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-position-x: -1px;
     }
   }
 }
