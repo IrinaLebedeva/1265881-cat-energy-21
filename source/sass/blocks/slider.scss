@@ -1,101 +1,96 @@
 .slider {
   position: relative;
 
-  @media (min-width: $tablet-width) {
-    &::after {
-      @include pseudo();
-
-      height: 463px;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      background-color: $background-color--secondary-accent;
-
-      z-index: 0;
-    }
-  }
+  margin-right: auto;
+  margin-left: auto;
 
   @media (min-width: $desktop-width) {
-    &::after {
-      height: 0;
-    }
+    margin-top: -54px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
 .slider__list {
   @include list-reset();
 
-  min-height: 230px;
+  position: relative;
+
+  height: 318px;
+  width: 314px;
 
   @media (min-width: $tablet-width) {
-    position: relative;
+    height: 632px;
+    width: 684px;
+  }
 
-    min-height: 527px;
+  @media (min-width: $desktop-width) {
+    height: 653px;
+    width: 731px;
+    margin-right: -50px;
   }
 }
 
 .slider__item {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+
+  z-index: 1;
 
   &--active {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+    z-index: 2;
+    background-color: $background-color--secondary-accent;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
+    @media (min-width: $tablet-width) {
+      background-color: $background-color--main;
+      width: 50%;
+      overflow: hidden;
 
-  @media (min-width: $desktop-width) {
-    width: unset;
-  }
-}
+      &::after {
+        @include pseudo();
 
-.slider__list-wrapper {
-  margin-bottom: 27px;
+        height: 462px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: $background-color--secondary-accent;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 13px;
+        z-index: -1;
+      }
+    }
 
-    position: relative;
-    z-index: 1;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 33px;
-  }
-}
-
-.slider__img-wrapper {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @media (min-width: $desktop-width) {
+      &::after {
+        background: $background-color--secondary;
+      }
+    }
   }
 }
 
 .slider__img {
+  height: auto;
+
   @media (min-width: $tablet-width) {
-    width: auto;
-    height: 520px;
+    width: 679px;
   }
 }
 
 .slider__toggles-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 21px;
+
+  z-index: 2;
+
   text-align: center;
 
-  margin-top: 0;
-  margin-bottom: 4px;
-
-  position: relative;
-  z-index: 1;
+  @media (min-width: $tablet-width) {
+    bottom: 51px;
+  }
 
   @media (min-width: $desktop-width) {
     text-align: left;
@@ -117,8 +112,19 @@
     font-size: 20px;
     line-height: 21px;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
     padding-bottom: 5px;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      outline: 0;
+    }
+
+    &:active {
+      border-bottom: 0;
+      outline: 0;
+    }
   }
 }
 
@@ -173,24 +179,43 @@
   &--active-after::before {
     right: 4px;
   }
+}
 
-  &::after {
-    @media (min-width: $tablet-width) {
-      @include pseudo();
-      position: absolute;
-      top: -13px;
-      left: 200px;
+.slider__roller {
+  display: none;
 
-      width: 33px;
-      height: 33px;
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: -13px;
+    left: 200px;
 
-      background-color: $background-color--accent;
+    width: 34px;
+    height: 34px;
 
-      border: 14px solid $background-color--main;
-      border-radius: 50%;
-      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    background-color: $background-color--accent;
 
-      cursor: pointer;
+    border: 13px solid $background-color--main;
+    border-radius: 50%;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+
+    padding: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+      outline: 0;
+    }
+
+    &:active {
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+      outline: 0;
+      box-shadow: 0 0 0 1px $background-color--accent;
+    }
+
+    &:visited {
+      outline: 0;
     }
   }
 }

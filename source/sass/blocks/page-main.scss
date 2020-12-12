@@ -56,9 +56,21 @@
 .page-main__example {
   position: relative;
 
-  @media (min-width: $desktop-width) {
-    padding-bottom: 17px;
+  @media (min-width: $tablet-width) {
+    &::after {
+      @include pseudo();
 
+      height: 462px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: $background-color--secondary-accent;
+
+      z-index: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
     &::after {
       @include pseudo();
 
@@ -67,7 +79,7 @@
       bottom: 0;
       left: 0;
       background: $background-color--secondary
-        linear-gradient(95deg, $background-color--secondary 0%, $background-color--secondary-accent 80%, $background-color--secondary-accent 100%);
+        linear-gradient(95deg, $background-color--secondary 0%, $background-color--secondary 50%, $background-color--secondary-accent 100%);
 
       z-index: 0;
     }
