@@ -8,6 +8,7 @@ $page__font--main: "Arial", sans-serif;
     format("woff2");
   src: url("../fonts/oswaldregular.woff")
     format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -18,4 +19,5 @@ $page__font--main: "Arial", sans-serif;
     format("woff2");
   src: url("../fonts/oswaldmedium.woff")
     format("woff");
+  font-display: swap;
 }

@@ -20,7 +20,7 @@
     width: 50%;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     width: 325px;
   }
 }
@@ -33,7 +33,7 @@
     width: 50%;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     flex-grow: 1;
 
     width: unset;
@@ -64,7 +64,7 @@
     width: 100%;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     width: 244px;
   }
 }

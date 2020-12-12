@@ -4,13 +4,60 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  border-top: 1px solid $color--border-secondary;
+
+  @media (min-width: $tablet-width) {
+    border-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 500px;
+  }
+
+  &::after,
+  &::before {
+    @media (min-width: $desktop-width) {
+      @include pseudo();
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 694px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      background-color: $background-color--tagline;
+    }
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/index-background-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--closed {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
 }
 
 .nav-list__item {
   padding-top: 22px;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid $color--border-secondary;
 
   display: block;
   width: 100%;
@@ -22,11 +69,15 @@
     display: inline-block;
     width: unset;
   }
+
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+  }
 }
 
 .nav-list__item:not(:last-child) {
   @media (min-width: $tablet-width) {
-    margin-right: 34px;
+    margin-right: 35px;
   }
 }
 
@@ -38,13 +89,35 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
+    font-weight: normal;
 
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color--accent;
   }
 
   &--active {
     @media (min-width: $tablet-width) {
-      border-bottom: 2px solid $background-color--accent;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-bottom-color: $background-color--accent;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-bottom-color: $color--accent;
     }
   }
 }

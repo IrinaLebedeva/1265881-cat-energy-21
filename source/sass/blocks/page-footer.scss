@@ -6,32 +6,51 @@
 
 .page-footer__contacts-wrapper {
   position: relative;
+
+  padding-top: 28px;
+  padding-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 64px;
+    padding-right: 72px;
+    padding-bottom: 58px;
+    padding-left: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .page-footer__contacts {
   background-color: $background-color--main;
 
-  margin-bottom: 22px;
-
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     top: 95px;
-    left: 0;
+    left: 30px;
   }
 
   &--inner {
     background-color: $background-color--secondary;
 
-    @media (min-width: $desctop-width) {
+    @media (min-width: $desktop-width) {
       background-color: $background-color--main;
     }
   }
 }
 
 .page-footer__map-wrapper {
-  background-color: $background-color--secondary-accent;
+  background-color: $background-color--secondary;
 
-  height: 362px;
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
+}
+
+.page-footer__map {
+  width: 100%;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     height: 400px;
@@ -40,4 +59,16 @@
 
 .page-footer__bottom {
   background-color: $background-color--secondary;
+
+  padding-top: 35px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 53px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 63px;
+  }
 }

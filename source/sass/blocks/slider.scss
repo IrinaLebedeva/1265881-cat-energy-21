@@ -1,16 +1,221 @@
+.slider {
+  position: relative;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -54px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
 .slider__list {
   @include list-reset();
+
+  position: relative;
+
+  height: 318px;
+  width: 314px;
+
+  @media (min-width: $tablet-width) {
+    height: 632px;
+    width: 684px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 653px;
+    width: 731px;
+    margin-right: -50px;
+  }
+}
+
+.slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+
+  z-index: 1;
+
+  &--active {
+    z-index: 2;
+    background-color: $background-color--secondary-accent;
+
+    @media (min-width: $tablet-width) {
+      background-color: $background-color--main;
+      width: 50%;
+      overflow: hidden;
+
+      &::after {
+        @include pseudo();
+
+        height: 462px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: $background-color--secondary-accent;
+
+        z-index: -1;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &::after {
+        background: $background-color--secondary;
+      }
+    }
+  }
+}
+
+.slider__img {
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 679px;
+  }
 }
 
 .slider__toggles-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 21px;
+
+  z-index: 2;
+
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-left: 81px;
+  }
 }
 
 .slider__toggles-item {
   @include font-accent-regular(16px, 20px, $color--secondary);
   text-transform: uppercase;
 
-  background-color: $background-color--secondary-accent;
-
+  background-color: transparent;
   border: none;
+  padding: 0;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+    padding-bottom: 5px;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      outline: 0;
+    }
+
+    &:active {
+      border-bottom: 0;
+      outline: 0;
+    }
+  }
+}
+
+.slider__track {
+  width: 84px;
+  height: 14px;
+
+  display: inline-block;
+  position: relative;
+
+  background-color: $background-color--main;
+
+  border: 1px solid $color--border-accent;
+  border-radius: 6px;
+
+  margin-left: 14px;
+  margin-right: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+
+    border: 0;
+    border-radius: 6px;
+    background-color: $color--slider-track;
+
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-bottom: 6px;
+  }
+
+  &::before {
+    @include pseudo();
+    position: absolute;
+    top: 3px;
+    width: 35px;
+    height: 6px;
+
+    background-color: $background-color--accent;
+
+    border-radius: 6px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--active-before::before {
+    left: 4px;
+  }
+
+  &--active-after::before {
+    right: 4px;
+  }
+}
+
+.slider__roller {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: -13px;
+    left: 200px;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: $background-color--accent;
+
+    border: 13px solid $background-color--main;
+    border-radius: 50%;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+
+    padding: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+      outline: 0;
+    }
+
+    &:active {
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+      outline: 0;
+      box-shadow: 0 0 0 1px $background-color--accent;
+    }
+
+    &:visited {
+      outline: 0;
+    }
+  }
 }

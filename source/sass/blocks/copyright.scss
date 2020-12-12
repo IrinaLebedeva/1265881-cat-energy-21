@@ -1,4 +1,33 @@
-.copyright__text {
+.copyright__link {
   @include font-main(16px, 18.4px, $color--main);
   text-decoration: none;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__icon {
+  color: $color--icon;
+
+  &:hover,
+  &:focus {
+    color: $background-color--accent;
+  }
+
+  &:active {
+    color: $background-color--accent;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 24px;
+  }
 }

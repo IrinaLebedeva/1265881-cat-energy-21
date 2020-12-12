@@ -35,9 +35,9 @@
       <h1 class="page-main__title container page-title">Подбор программы</h1>
       <form class="page-main__program-form form" method="post" action="https://echo.htmlacademy.ru">
         <p class="form__introduction container container--narrow">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <fieldset class="form__desctop-row form__fieldset">
+        <fieldset class="form__desktop-row form__fieldset">
           <legend class="visually-hidden">Данные кота</legend>
-          <div class="form__desctop-col form__desctop-col--left form__desctop-col--with-border form-fieldset">
+          <div class="form__desktop-col form__desktop-col--left form__desktop-col--with-border form-fieldset">
             <p class="form-fieldset__field">
               <label class="form__label form-fieldset__label" for="pet-name">Имя:*</label>
               <input class="form__input form__input--text" name="pet-name" id="pet-name" type="text" minlength="2" required placeholder="Барсик">
@@ -51,7 +51,7 @@
               <input class="form__input form__input--text" name="pet-age" id="pet-age" type="number" min="0" max="20" placeholder="7">
             </p>
           </div>
-          <div class="form__desctop-col form__desctop-col--right form__desctop-col--with-border">
+          <div class="form__desktop-col form__desktop-col--right form__desktop-col--with-border">
             <ul class="form-list form-list--with-border">
               <li class="form-list__item">
                 <input class="form-list__input form-list__input--radio" name="program-type" id="program-type--slim" type="radio" value="slim" checked>
@@ -74,12 +74,12 @@
               <span class="form__legend-text">Контактные данные (владельца кота)</span>
             </span>
           </legend>
-          <div class="form__desctop-row form-fieldset">
-            <p class="form__desctop-col form__desctop-col--left form-fieldset__field">
+          <div class="form__desktop-row form-fieldset">
+            <p class="form__desktop-col form__desktop-col--left form-fieldset__field">
               <label class="form__label form-fieldset__label form-fieldset__label--closer-to-field" for="pet-owner-email">E-mail:*</label>
               <input class="form__input form__input--accent form__input--text" name="pet-owner-email" id="pet-owner-email" type="email" required placeholder="kuklachev@gmail.com">
             </p>
-            <p class="form__desctop-col form__desctop-col--right form-fieldset__field">
+            <p class="form__desktop-col form__desktop-col--right form-fieldset__field">
               <label class="form__label form-fieldset__label form-fieldset__label--closer-to-field" for="pet-owner-phone">Телефон:*</label>
               <input class="form__input form__input--accent form__input--text" name="pet-owner-phone" id="pet-owner-phone" type="tel" required placeholder="8 (960) 900-60-90">
             </p>
@@ -151,8 +151,8 @@
       <div class="page-footer__bottom">
         <div class="container footer">
           <div class="footer__logo-link-wrapper">
-            <a class="footer__logo-link" aria-label="Логотип Кэт энерджи">
-              <svg class="footer__logo" width="128" height="24">
+            <a class="footer__logo-link" href="index.html" aria-label="Логотип Кэт энерджи">
+              <svg class="footer__logo" width="128" height="24" >
                 <use xlink:href="img/sprite.svg#footer__logo"></use>
               </svg>
             </a>
@@ -162,32 +162,32 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#" target="_blank" aria-label="Кэт энерджи ВКонтакте">
-                  <svg class="social__icon-vk" width="22" height="22">
-                    <use xlink:href="img/sprite.svg#social__link--icon-vk"></use>
+                  <svg class="social__icon-vk" width="23" height="16">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--icon-instagram" href="#" target="_blank" aria-label="Кэт энерджи Инстаграм">
+                  <svg class="social__icon-instagram" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--icon-facebook" href="#" target="_blank" aria-label="Кэт энерджи Фейсбук">
                   <svg class="social__icon-facebook" width="22" height="22">
-                    <use xlink:href="img/sprite.svg#social__link--icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--icon-instagram" href="#" target="_blank" aria-label="Кэт энерджи Инстаграм">
-                  <svg class="social__icon-instagram" width="22" height="22">
-                    <use xlink:href="img/sprite.svg#social__link--icon-instagram"></use>
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </div>
           <div class="footer__copyright copyright">
-            <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-              <svg class="copyright__logo" width="27" height="34">
-                <use xlink:href="img/sprite.svg#copyright__logo"></use>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Сайт HTML Academy">
+              HTML Academy
+              <svg class="copyright__icon" width="27" height="34">
+                <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
               </svg>
             </a>
           </div>

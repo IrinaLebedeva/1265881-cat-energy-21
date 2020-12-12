@@ -14,6 +14,16 @@
   background-color: $background-color--accent;
   border: none;
 
+  &:hover,
+  &:focus {
+    background-color: $background-color--button-focus;
+  }
+
+  &:active {
+    background-color: $background-color--button-focus;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     display: inline-block;
     width: unset;
@@ -26,15 +36,28 @@
 
     display: block;
     width: 100%;
+
+    &:hover,
+    &:focus {
+      background-color: $background-color--button-secondary-focus;
+    }
+
+    &:active {
+      background-color: $background-color--button-secondary-focus;
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--tagline {
     font-size: 14px;
     line-height: 18px;
 
+    padding-top: 10px;
+    padding-bottom: 12px;
+
     @media (min-width: $tablet-width) {
       font-size: 20px;
-      padding: 14px 26px;
+      padding: 18px 26px;
     }
   }
 
@@ -46,7 +69,7 @@
       padding-bottom: 14px;
     }
 
-    @media (min-width: $desctop-width) {
+    @media (min-width: $desktop-width) {
       width: 568px;
     }
   }

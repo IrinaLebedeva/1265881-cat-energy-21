@@ -16,4 +16,8 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }

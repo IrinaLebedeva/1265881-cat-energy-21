@@ -10,7 +10,7 @@
     width: 160px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     text-align: left;
   }
 }
@@ -19,6 +19,7 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
+    margin-top: -2px;
     margin-bottom: 20px;
   }
 }

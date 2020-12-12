@@ -1,23 +1,44 @@
+.tagline {
+  @media (min-width: $desktop-width) {
+    min-height: 573px;
+  }
+}
+
 .tagline__header-wrapper {
   background-image: url("../img/index-background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     background-image: unset;
+    margin-left: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 160px;
   }
 }
 
 .tagline__header {
   background-color: $background-color--tagline;
 
-  padding-top: 27px;
-  padding-bottom: 164px;
+  padding-top: 26px;
+  padding-bottom: 135px;
 
   @media (min-width: $tablet-width) {
     background: $background-color--main;
 
     padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: transparent;
+
+    padding-top: 82px;
   }
 }
 
@@ -42,7 +63,11 @@
 
     text-align: left;
 
-    width: 414px;
+    max-width: 414px;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 41px;
   }
 }
@@ -64,6 +89,24 @@
 
     margin-bottom: 20px;
   }
+
+  @media (max-width: $desktop-width) {
+    max-width: 414px;
+  }
+}
+
+.tagline__footer-wrapper {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    position: unset;
+  }
+}
+
+.tagline__footer-container {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .tagline__image-wrapper {
@@ -77,26 +120,24 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -283px;
+    left: 478px;
+  }
 }
 
-.tagline__image {
+.tagline__image-container {
   position: absolute;
   top: -135px;
 
-  height: 270px;
-  width: 280px;
-
   @media (min-width: $tablet-width) {
-    height: 609px;
-    width: 709px;
-
     position: relative;
     top: 0;
   }
 
-  @media (min-width: $desctop-width) {
-    height: 499px;
-
+  @media (min-width: $desktop-width) {
     top: 0;
     right: 0;
     bottom: unset;
@@ -104,11 +145,35 @@
   }
 }
 
-.tagline__button {
+.tagline__image {
+  height: auto;
+  width: 280px;
+
   @media (min-width: $tablet-width) {
-    position: relative;
+    width: 709px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+  }
+}
+
+.tagline__button {
+  margin-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 29px;
 
     margin-top: 29px;
     margin-left: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: unset;
+
+    margin-top: 31px;
+    margin-left: 80px;
   }
 }
