@@ -168,6 +168,18 @@
     opacity: 1;
   }
 
+  &:hover {
+    border-color: $color--border-accent;
+  }
+
+  &:focus {
+    border-color: $color--main;
+  }
+
+  &:invalid {
+    border-color: $color--border-input--error;
+  }
+
   &--accent {
     border-color: $color--border-accent;
   }

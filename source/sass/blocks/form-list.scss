@@ -13,12 +13,16 @@
     @media (min-width: $tablet-width) {
       border: 1px solid $color--border-input;
 
-      padding-left: 20px;
+      padding-top: 25px;
+      padding-right: 28px;
+      padding-bottom: 0;
+      padding-left: 28px;
     }
   }
 }
 
 .form-list__item {
+  position: relative;
   margin-bottom: 13px;
 
   &--row {
@@ -35,8 +39,64 @@
 .form-list__label {
   @include font-accent-regular(16px, 18px, $color--main-accent);
   text-transform: uppercase;
+  cursor: pointer;
+
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &--accent {
     color: $color--secondary;
+  }
+}
+
+.form-list__input {
+  &--radio + label {
+    padding-left: 46px;
+    padding-bottom: 19px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 29px;
+    }
+  }
+
+  &--radio + label::before {
+    @include pseudo();
+    top: -4px;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: $background-color--main;
+
+    border-width: 8px;
+    border-style: solid;
+    border-color: $background-color--main;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 1px $color--border-accent;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $color--border-radio--hover;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+
+      border-width: 11px;
+    }
+  }
+
+  &--radio:checked + label::before {
+    background-color: $background-color--accent;
+  }
+
+  &--radio:disabled + label {
+    opacity: 0.3;
   }
 }
