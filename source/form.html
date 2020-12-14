@@ -35,9 +35,11 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title container page-title">Подбор программы</h1>
+      <h1 class="page-main__title container container--narrow page-title">Подбор программы</h1>
       <form class="page-main__program-form form" method="post" action="https://echo.htmlacademy.ru">
-        <p class="form__introduction container container--narrow">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <div class="container container--narrow">
+          <p class="form__introduction">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        </div>
         <fieldset class="form__desktop-row form__fieldset">
           <legend class="visually-hidden">Данные кота</legend>
           <div class="form__desktop-col form__desktop-col--left form__desktop-col--with-border form-fieldset">
@@ -71,10 +73,10 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--contacts">
           <legend class="form__legend">
             <span class="form__legend-text-container">
-              <span class="form__legend-text">Контактные данные (владельца кота)</span>
+              <span class="form__legend-text form__legend-text--small">Контактные данные (владельца кота)</span>
             </span>
           </legend>
           <div class="form__desktop-row form-fieldset">
@@ -88,7 +90,7 @@
             </p>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--comment">
           <legend class="form__legend">
             <span class="form__legend-text-container">
               <span class="form__legend-text">Комментарий</span>
@@ -98,13 +100,13 @@
             <textarea class="form__input form__input--textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--additional">
           <legend class="form__legend">
             <span class="form__legend-text-container">
               <span class="form__legend-text">Дополнительно</span>
             </span>
           </legend>
-          <div class="container container--narrow">
+          <div class="container container--narrow container--form-list-row">
             <ul class="form-list form-list--row">
               <li class="form-list__item form-list__item--row">
                 <input class="form-list__input form-list__input--checkbox visually-hidden" name="additional-sugar" id="additional-sugar" type="checkbox" value="sugar" checked>
@@ -125,11 +127,11 @@
             </ul>
           </div>
         </fieldset>
-        <div class="form__tablet-row container container--narrow">
-          <div class="form__tablet-col form__button">
+        <div class="container container--narrow">
+          <div class="form__submit-container">
             <button class="button button--form" type="submit">Отправить заявку</button>
           </div>
-          <small class="form__tablet-col form__comment">* — Обязательные поля</small>
+          <small class="form__comment">* — Обязательные поля</small>
         </div>
       </form>
     </main>

@@ -2,10 +2,13 @@
   @include list-reset();
 
   &--row {
+    margin-top: 5px;
+
     @media (min-width: $tablet-width) {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+
+      margin-top: -13px;
     }
   }
 
@@ -13,25 +16,39 @@
     @media (min-width: $tablet-width) {
       border: 1px solid $color--border-input;
 
-      padding-top: 25px;
+      padding-top: 27px;
       padding-right: 28px;
-      padding-bottom: 0;
+      padding-bottom: 28px;
       padding-left: 28px;
+    }
+
+    .form-list__item:last-child {
+      margin-bottom: 0;
     }
   }
 }
 
 .form-list__item {
   position: relative;
-  margin-bottom: 13px;
+  margin-bottom: 24px;
 
   &--row {
+    margin-bottom: 5px;
+
     @media (min-width: $tablet-width) {
-      width: 50%;
+      width: 344px;
+
+      margin-bottom: 13px;
     }
 
     @media (min-width: $desktop-width) {
-      width: 25%;
+      &:not(:last-child) {
+        width: 325px;
+      }
+
+      &:last-child {
+        width: unset;
+      }
     }
   }
 }
@@ -41,7 +58,8 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  display: block;
+  display: flex;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -56,20 +74,19 @@
 .form-list__input {
   &--radio + label {
     padding-left: 46px;
-    padding-bottom: 19px;
 
     @media (min-width: $tablet-width) {
-      padding-bottom: 29px;
+      padding-left: 60px;
     }
   }
 
   &--radio + label::before {
     @include pseudo();
-    top: -4px;
+    top: -6px;
     left: 0;
 
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
 
     background-color: $background-color--main;
 
@@ -80,13 +97,16 @@
 
     box-shadow: 0 0 0 1px $color--border-accent;
 
-    &:hover {
-      box-shadow: 0 0 0 1px $color--border-radio--hover;
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px $color--border-list-input--hover;
     }
 
     @media (min-width: $tablet-width) {
-      width: 40px;
-      height: 40px;
+      top: -4px;
+
+      width: 39px;
+      height: 39px;
 
       border-width: 11px;
     }
@@ -96,7 +116,41 @@
     background-color: $background-color--accent;
   }
 
-  &--radio:disabled + label {
+  &--checkbox + label {
+    padding-left: 46px;
+    padding-bottom: 19px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 59px;
+      padding-bottom: 29px;
+    }
+  }
+
+  &--checkbox + label::before {
+    @include pseudo();
+    top: -6px;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color--border-accent;
+
+    &:hover,
+    &:focus {
+      border-color: $color--border-list-input--hover;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--radio:disabled + label,
+  &--checkbox:disabled + label {
     opacity: 0.3;
   }
 }
