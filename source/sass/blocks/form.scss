@@ -74,7 +74,7 @@
     font-size: 20px;
     line-height: 30px;
 
-    margin-bottom: 66px;
+    margin-bottom: 67px;
 
     width: 325px;
   }
@@ -82,7 +82,15 @@
 
 .form__fieldset {
   border: 0;
+
   padding: 0;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 41px;
@@ -116,7 +124,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 87px;
+      margin-bottom: 85px;
     }
   }
 
@@ -128,7 +136,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 22px;
+      margin-bottom: 23px;
     }
   }
 }
@@ -138,6 +146,8 @@
   display: block;
   width: 100%;
 
+  padding: 0;
+  margin: 0;
   margin-bottom: -5px;
 
   @media (min-width: $tablet-width) {
@@ -230,6 +240,41 @@
   }
 }
 
+.form__input-icon {
+  position: absolute;
+  color: $color--main-accent;
+
+  &--email {
+    right: 35px;
+    top: 17px;
+
+    @media (min-width: $tablet-width) {
+      right: 83px;
+      top: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 19px;
+      top: 18px;
+    }
+  }
+
+  &--phone {
+    right: 33px;
+    top: 14px;
+
+    @media (min-width: $tablet-width) {
+      right: 83px;
+      top: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 47px;
+      top: 15px;
+    }
+  }
+}
+
 .form__input {
   border-width: 1px;
   border-color: $color--border-input;
@@ -263,20 +308,46 @@
 
   &:focus {
     border-color: $color--main;
-  }
+    outline: none;
 
-  &:invalid {
-    border-color: $color--border-input--error;
+    & + .form__input-icon {
+      color: $background-color--accent;
+    }
   }
 
   &--accent {
     border-color: $color--border-accent;
   }
 
-  &--text {
+  &--text,
+  &--number {
     flex-grow: 1;
     width: 170px;
     height: 44px;
+
+    @media (min-width: $tablet-width) {
+      height: 50px;
+    }
+  }
+
+  &--number {
+    /* Firefox */
+    appearance: textfield;
+
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+
+  &--invalid {
+    border-color: $color--border-input--error;
+
+    & + .form__input-icon {
+      color: $color--border-input--error;
+    }
   }
 
   &--textarea {
@@ -293,19 +364,34 @@
     @media (min-width: $tablet-width) {
       height: 175px;
 
+      padding-top: 10px;
+      padding-left: 17px;
+
       margin-top: 0;
     }
   }
 }
 
-.form__submit-container {
+.form__submit-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.form__button-wrapper {
   margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
-    display: inline-block;
-
     margin-bottom: 40px;
-    margin-right: 58px;
+    margin-right: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 82px;
   }
 }
 
@@ -315,14 +401,17 @@
 
 .form__comment {
   @include font-main(14px, 16px, $color--secondary);
-
-  display: block;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    display: inline-block;
+    font-size: 16px;
+
     text-align: left;
 
-    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 18px;
   }
 }

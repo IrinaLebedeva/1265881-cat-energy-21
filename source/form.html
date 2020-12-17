@@ -45,15 +45,17 @@
           <div class="form__desktop-col form__desktop-col--left form__desktop-col--with-border form-fieldset">
             <p class="form-fieldset__field">
               <label class="form__label form-fieldset__label" for="pet-name">Имя:*</label>
+              <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
               <input class="form__input form__input--text" name="pet-name" id="pet-name" type="text" minlength="2" required placeholder="Барсик">
             </p>
             <p class="form-fieldset__field">
               <label class="form__label form-fieldset__label" for="pet-weight">Вес (кг):*</label>
-              <input class="form__input form__input--text" name="pet-weight" id="pet-weight" type="number" min="0" max="20" required placeholder="7">
+              <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
+              <input class="form__input form__input--number" name="pet-weight" id="pet-weight" type="number" min="0" max="20" required placeholder="7">
             </p>
             <p class="form-fieldset__field">
               <label class="form__label form-fieldset__label" for="pet-age">Возраст (лет):</label>
-              <input class="form__input form__input--text" name="pet-age" id="pet-age" type="number" min="0" max="20" placeholder="7">
+              <input class="form__input form__input--number" name="pet-age" id="pet-age" type="number" min="0" max="20" placeholder="7">
             </p>
           </div>
           <div class="form__desktop-col form__desktop-col--right form__desktop-col--with-border">
@@ -82,11 +84,19 @@
           <div class="form__desktop-row form-fieldset">
             <p class="form__desktop-col form__desktop-col--left form-fieldset__field">
               <label class="form__label form-fieldset__label form-fieldset__label--closer-to-field" for="pet-owner-email">E-mail:*</label>
-              <input class="form__input form__input--accent form__input--text" name="pet-owner-email" id="pet-owner-email" type="email" required placeholder="kuklachev@gmail.com">
+              <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
+              <input class="form__input form__input--accent form__input--text form__input--email" name="pet-owner-email" id="pet-owner-email" type="email" required placeholder="kuklachev@gmail.com">
+              <svg class="form__input-icon form__input-icon--email" width="20" height="15" >
+                <use xlink:href="img/sprite.svg#input-icon--email"></use>
+              </svg>
             </p>
             <p class="form__desktop-col form__desktop-col--right form-fieldset__field">
               <label class="form__label form-fieldset__label form-fieldset__label--closer-to-field" for="pet-owner-phone">Телефон:*</label>
+              <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
               <input class="form__input form__input--accent form__input--text" name="pet-owner-phone" id="pet-owner-phone" type="tel" required placeholder="8 (960) 900-60-90">
+              <svg class="form__input-icon form__input-icon--phone" width="20" height="21" >
+                <use xlink:href="img/sprite.svg#input-icon--phone"></use>
+              </svg>
             </p>
           </div>
         </fieldset>
@@ -127,8 +137,8 @@
             </ul>
           </div>
         </fieldset>
-        <div class="container container--narrow">
-          <div class="form__submit-container">
+        <div class="container container--narrow form__submit-wrapper">
+          <div class="form__button-wrapper">
             <button class="button button--form" type="submit">Отправить заявку</button>
           </div>
           <small class="form__comment">* — Обязательные поля</small>
@@ -136,7 +146,7 @@
       </form>
     </main>
     <footer class="page-footer page-footer--inner">
-      <div class="container container--narrow page-footer__contacts-wrapper">
+      <div class="container page-footer__contacts-wrapper">
         <div class="page-footer__contacts page-footer__contacts--inner">
           <div class="contacts">
             <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -151,7 +161,16 @@
         </div>
       </div>
       <div class="page-footer__map-wrapper">
-        <img class="page-footer__map" src="img/map.jpg" width="320" height="362" alt="Адрес компании Кэт энерджи: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+        <picture>
+          <!--
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+          -->
+          <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="page-footer__map" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="362" alt="Адрес компании Кэт энерджи: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+        </picture>
       </div>
       <div class="page-footer__bottom">
         <div class="container footer">
