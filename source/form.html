@@ -8,17 +8,20 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo-img" href="index.html">
-        <img src="img/page-header__logo-img.svg" width="33" height="37" alt="Кэт энерджи - логотип с картинкой кота">
+      <a class="page-header__logo-img-wrapper" href="index.html">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/page-header__logo-img--tablet.svg">
+          <img class="page-header__logo-img" src="img/page-header__logo-img.svg" width="33" height="37" alt="Кэт энерджи - логотип с картинкой кота">
+        </picture>
       </a>
       <a class="page-header__logo-text" href="index.html">
         <img src="img/page-header__logo-text.svg" width="101" height="18" alt="Кэт энерджи - текстовый логотип">
       </a>
-      <button class="page-header__main-nav-toggle" type="button">
+      <button class="page-header__main-nav-toggle nav-toggle nav-toggle--opened" type="button"><!--nav-toggle--closed-->
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <nav class="page-header__main-nav">
-        <ul class="nav-list">
+        <ul class="nav-list"><!--nav-list--closed-->
           <li class="nav-list__item">
             <a class="nav-list__link" href="index.html">Главная</a>
           </li>
@@ -32,60 +35,72 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title container page-title">Подбор программы</h1>
+      <h1 class="page-main__title container container--narrow page-title">Подбор программы</h1>
       <form class="page-main__program-form form" method="post" action="https://echo.htmlacademy.ru">
-        <p class="form__introduction container container--narrow">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <div class="container container--narrow">
+          <p class="form__introduction">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        </div>
         <fieldset class="form__desktop-row form__fieldset">
           <legend class="visually-hidden">Данные кота</legend>
           <div class="form__desktop-col form__desktop-col--left form__desktop-col--with-border form-fieldset">
             <p class="form-fieldset__field">
               <label class="form__label form-fieldset__label" for="pet-name">Имя:*</label>
+              <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
               <input class="form__input form__input--text" name="pet-name" id="pet-name" type="text" minlength="2" required placeholder="Барсик">
             </p>
             <p class="form-fieldset__field">
               <label class="form__label form-fieldset__label" for="pet-weight">Вес (кг):*</label>
-              <input class="form__input form__input--text" name="pet-weight" id="pet-weight" type="number" min="0" max="20" required placeholder="7">
+              <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
+              <input class="form__input form__input--number" name="pet-weight" id="pet-weight" type="number" min="0" max="20" required placeholder="7">
             </p>
             <p class="form-fieldset__field">
               <label class="form__label form-fieldset__label" for="pet-age">Возраст (лет):</label>
-              <input class="form__input form__input--text" name="pet-age" id="pet-age" type="number" min="0" max="20" placeholder="7">
+              <input class="form__input form__input--number" name="pet-age" id="pet-age" type="number" min="0" max="20" placeholder="7">
             </p>
           </div>
           <div class="form__desktop-col form__desktop-col--right form__desktop-col--with-border">
             <ul class="form-list form-list--with-border">
               <li class="form-list__item">
-                <input class="form-list__input form-list__input--radio" name="program-type" id="program-type--slim" type="radio" value="slim" checked>
+                <input class="form-list__input form-list__input--radio visually-hidden" name="program-type" id="program-type--slim" type="radio" value="slim" checked>
                 <label class="form-list__label" for="program-type--slim">Похудение</label>
               </li>
               <li class="form-list__item">
-                <input class="form-list__input form-list__input--radio" name="program-type" id="program-type--pro" type="radio" value="pro">
+                <input class="form-list__input form-list__input--radio visually-hidden" name="program-type" id="program-type--pro" type="radio" value="pro">
                 <label class="form-list__label" for="program-type--pro">Набор массы</label>
               </li>
               <li class="form-list__item">
-                <input class="form-list__input form-list__input--radio" name="program-type" id="program-type--advise-required" type="radio" value="advise-required">
+                <input class="form-list__input form-list__input--radio visually-hidden" name="program-type" id="program-type--advise-required" type="radio" value="advise-required">
                 <label class="form-list__label" for="program-type--advise-required">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--contacts">
           <legend class="form__legend">
             <span class="form__legend-text-container">
-              <span class="form__legend-text">Контактные данные (владельца кота)</span>
+              <span class="form__legend-text form__legend-text--small">Контактные данные (владельца кота)</span>
             </span>
           </legend>
           <div class="form__desktop-row form-fieldset">
             <p class="form__desktop-col form__desktop-col--left form-fieldset__field">
               <label class="form__label form-fieldset__label form-fieldset__label--closer-to-field" for="pet-owner-email">E-mail:*</label>
-              <input class="form__input form__input--accent form__input--text" name="pet-owner-email" id="pet-owner-email" type="email" required placeholder="kuklachev@gmail.com">
+              <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
+              <input class="form__input form__input--accent form__input--text form__input--email" name="pet-owner-email" id="pet-owner-email" type="email" required placeholder="kuklachev@gmail.com">
+              <svg class="form__input-icon form__input-icon--email" width="20" height="15" >
+                <use xlink:href="img/sprite.svg#input-icon--email"></use>
+              </svg>
             </p>
             <p class="form__desktop-col form__desktop-col--right form-fieldset__field">
               <label class="form__label form-fieldset__label form-fieldset__label--closer-to-field" for="pet-owner-phone">Телефон:*</label>
+              <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
               <input class="form__input form__input--accent form__input--text" name="pet-owner-phone" id="pet-owner-phone" type="tel" required placeholder="8 (960) 900-60-90">
+              <svg class="form__input-icon form__input-icon--phone" width="20" height="21" >
+                <use xlink:href="img/sprite.svg#input-icon--phone"></use>
+              </svg>
             </p>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--comment">
           <legend class="form__legend">
             <span class="form__legend-text-container">
               <span class="form__legend-text">Комментарий</span>
@@ -95,43 +110,43 @@
             <textarea class="form__input form__input--textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--additional">
           <legend class="form__legend">
             <span class="form__legend-text-container">
               <span class="form__legend-text">Дополнительно</span>
             </span>
           </legend>
-          <div class="container container--narrow">
+          <div class="container container--narrow container--form-list-row">
             <ul class="form-list form-list--row">
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--checkbox" name="additional-sugar" id="additional-sugar" type="checkbox" value="sugar" checked>
+                <input class="form-list__input form-list__input--checkbox visually-hidden" name="additional-sugar" id="additional-sugar" type="checkbox" value="sugar" checked>
                 <label class="form-list__label form-list__label--accent" for="additional-sugar">Сахарозаменитель</label>
               </li>
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--checkbox" name="additional-water" id="additional-water" type="checkbox" value="water">
+                <input class="form-list__input form-list__input--checkbox visually-hidden" name="additional-water" id="additional-water" type="checkbox" value="water">
                 <label class="form-list__label form-list__label--accent" for="additional-water">Питьевая вода</label>
               </li>
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--checkbox" name="additional-milk" id="additional-milk" type="checkbox" value="milk">
+                <input class="form-list__input form-list__input--checkbox visually-hidden" name="additional-milk" id="additional-milk" type="checkbox" value="milk">
                 <label class="form-list__label form-list__label--accent" for="additional-milk">Молоко</label>
               </li>
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--checkbox" name="additional-vitamins" id="additional-vitamins" type="checkbox" value="vitamins">
+                <input class="form-list__input form-list__input--checkbox visually-hidden" name="additional-vitamins" id="additional-vitamins" type="checkbox" value="vitamins">
                 <label class="form-list__label form-list__label--accent" for="additional-vitamins">Витамины</label>
               </li>
             </ul>
           </div>
         </fieldset>
-        <div class="form__tablet-row container container--narrow">
-          <div class="form__tablet-col form__button">
+        <div class="container container--narrow form__submit-wrapper">
+          <div class="form__button-wrapper">
             <button class="button button--form" type="submit">Отправить заявку</button>
           </div>
-          <small class="form__tablet-col form__comment">* — Обязательные поля</small>
+          <small class="form__comment">* — Обязательные поля</small>
         </div>
       </form>
     </main>
     <footer class="page-footer page-footer--inner">
-      <div class="container container--narrow page-footer__contacts-wrapper">
+      <div class="container page-footer__contacts-wrapper">
         <div class="page-footer__contacts page-footer__contacts--inner">
           <div class="contacts">
             <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -146,7 +161,16 @@
         </div>
       </div>
       <div class="page-footer__map-wrapper">
-        <img class="page-footer__map" src="img/map.jpg" width="320" height="362" alt="Адрес компании Кэт энерджи: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+        <picture>
+          <!--
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+          -->
+          <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="page-footer__map" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="362" alt="Адрес компании Кэт энерджи: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+        </picture>
       </div>
       <div class="page-footer__bottom">
         <div class="container footer">

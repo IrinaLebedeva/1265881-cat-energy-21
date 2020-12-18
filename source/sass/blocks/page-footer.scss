@@ -1,4 +1,8 @@
 .page-footer {
+  @media (min-width: $desktop-width) {
+    background-color: $background-color--secondary;
+  }
+
   &--inner {
     background-color: $background-color--secondary;
   }
@@ -45,6 +49,8 @@
 
   @media (min-width: $desktop-width) {
     height: 400px;
+    width: $desktop-width;
+    margin: 0 auto;
   }
 }
 
@@ -65,10 +71,11 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 53px;
-    padding-bottom: 22px;
+    padding-bottom: 51px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 63px;
+    padding-bottom: 45px;
   }
 }

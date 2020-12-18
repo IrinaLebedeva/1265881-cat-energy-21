@@ -15,31 +15,33 @@
     max-width: 500px;
   }
 
-  &::after,
-  &::before {
-    @media (min-width: $desktop-width) {
-      @include pseudo();
-      top: 0;
-      right: 0;
-      width: 50%;
-      height: 694px;
+  &--with-bg {
+    &::after,
+    &::before {
+      @media (min-width: $desktop-width) {
+        @include pseudo();
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 694px;
+      }
     }
-  }
 
-  &::after {
-    @media (min-width: $desktop-width) {
-      background-color: $background-color--tagline;
+    &::after {
+      @media (min-width: $desktop-width) {
+        background-color: $background-color--tagline;
+      }
     }
-  }
 
-  &::before {
-    @media (min-width: $desktop-width) {
-      background-image: url("../img/index-background-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
+    &::before {
+      @media (min-width: $desktop-width) {
+        background-image: url("../img/index-background-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+        }
       }
     }
   }
@@ -106,7 +108,7 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: $color--accent;
+    color: $color--main-secondary;
   }
 
   &--active {
@@ -115,7 +117,20 @@
       border-bottom-style: solid;
       border-bottom-color: $background-color--accent;
     }
+  }
 
+  &--with-bg {
+    @media (min-width: $desktop-width) {
+      color: $color--accent;
+
+      &:hover,
+      &:focus {
+        filter: unset;
+      }
+    }
+  }
+
+  &--with-bg.nav-list__link--active {
     @media (min-width: $desktop-width) {
       border-bottom-color: $color--accent;
     }

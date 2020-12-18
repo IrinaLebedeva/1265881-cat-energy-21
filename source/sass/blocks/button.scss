@@ -62,11 +62,16 @@
   }
 
   &--form {
+    padding-top: 11px;
+    padding-bottom: 9px;
+
     @media (min-width: $tablet-width) {
+      font-size: 20px;
+
       width: 282px;
 
-      padding-top: 14px;
-      padding-bottom: 14px;
+      padding-top: 17px;
+      padding-bottom: 15px;
     }
 
     @media (min-width: $desktop-width) {

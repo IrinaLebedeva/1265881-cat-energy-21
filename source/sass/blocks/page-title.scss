@@ -1,3 +1,8 @@
 .page-title {
   @include font-accent-regular(36px, 36px, $color--secondary);
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

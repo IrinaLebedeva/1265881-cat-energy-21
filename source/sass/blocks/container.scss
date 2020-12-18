@@ -21,6 +21,19 @@
     }
   }
 
+  &--form-list-row {
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: $container-padding--tablet + $container-padding-narrow--value;
+      padding-right: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 $container-padding--tablet;
+    }
+  }
+
   &--title-wrapper {
     padding: 0;
 
