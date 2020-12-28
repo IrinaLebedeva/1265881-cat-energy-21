@@ -41,6 +41,10 @@
 
   &--latest-products {
     border-bottom: 1px solid #ebebeb;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 34px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -74,12 +78,6 @@
 
     &:nth-child(4n) {
       margin-right: 0;
-    }
-  }
-
-  &--latest-products {
-    @media (min-width: $desktop-width) {
-      padding-left: 34px;
     }
   }
 }
