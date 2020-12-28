@@ -76,4 +76,10 @@
       margin-right: 0;
     }
   }
+
+  &--latest-products {
+    @media (min-width: $desktop-width) {
+      padding-left: 34px;
+    }
+  }
 }

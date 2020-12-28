@@ -10,33 +10,49 @@
   @include font-accent-regular(16px, 16px, $color--main-accent);
   text-transform: uppercase;
 
-  margin-top: 12px;
+  margin-top: 13px;
   margin-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
 
+    margin-top: 0;
+    margin-bottom: 26px;
+
     width: 50%;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 10px;
+    margin-bottom: 0;
+
     width: 325px;
   }
 }
 
 .other-product__info {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+
+  margin-top: 0;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     width: 50%;
+
+    padding-top: 4px;
+    justify-content: flex-end;
   }
 
   @media (min-width: $desktop-width) {
+    width: unset;
+
     flex-grow: 1;
 
-    width: unset;
+    padding-top: 14px;
+    justify-content: flex-start;
   }
 }
 
@@ -47,15 +63,29 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+  }
 }
 
 .other-product__price {
   @include font-main(14px, 14px, $color--main);
   text-transform: uppercase;
 
+  margin: 0;
+
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+
+    width: 92px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 84px;
+    text-align: left;
   }
 }
 
@@ -66,5 +96,7 @@
 
   @media (min-width: $desktop-width) {
     width: 244px;
+
+    align-self: flex-start;
   }
 }

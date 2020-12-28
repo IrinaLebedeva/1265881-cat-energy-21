@@ -111,3 +111,13 @@
     margin-bottom: 80px;
   }
 }
+
+.page-main__other-products {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
+  }
+}
