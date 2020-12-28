@@ -17,4 +17,7 @@
     navList.classList.toggle("nav-list--closed");
   });
 
+  //Hide opened menu on mobile, if javascript is enabled
+  const clickEvent = new Event("click");
+  navToggle.dispatchEvent(clickEvent);
 })();
