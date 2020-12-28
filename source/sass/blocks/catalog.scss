@@ -1,6 +1,14 @@
 .catalog__title {
   margin-top: 27px;
-  margin-bottom: 41px;
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 67px;
+  }
 }
 
 .catalog__list {
@@ -26,7 +34,7 @@
 
   padding-top: 19px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   padding-left: 20px;
 
   border-top: 1px solid #ebebeb;
@@ -37,9 +45,12 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 17px;
 
-    padding: 38px 40px;
+    padding-top: 52px;
+    padding-right: 35px;
+    padding-bottom: 38px;
+    padding-left: 39px;
 
     border-top: 0;
 
@@ -53,8 +64,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+
+    padding-top: 46px;
+
     &:nth-child(n) {
-      margin-right: 80px;
+      margin-right: 79px;
     }
 
     &:nth-child(4n) {

@@ -1,10 +1,40 @@
 .latest-products {
+  padding-top: 78px;
+
+  position: relative;
+
   @media (min-width: $tablet-width) {
     border: 2px solid $background-color--secondary;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-top: 125px;
+    padding-top: 160px;
+  }
+
+  &::before,
+  &::after {
+    @include pseudo();
+    top: 39px;
+    left: calc(50% - 15px);
+
+    width: 30px;
+    height: 2px;
+
+    background-color: $color--catalog-plus;
+
+    @media (min-width: $tablet-width) {
+      top: 80px;
+      left: calc(50% - 30px);
+
+      width: 60px;
+    }
+  }
+
+  &::after {
+    transform: rotate(90deg);
   }
 }
 
