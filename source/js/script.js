@@ -22,26 +22,6 @@
   navToggle.dispatchEvent(clickEvent);
 })();
 
-(function () {
-  let showCatalogLatestProducts = document.querySelector(".js-show-catalog-latest-products");
-
-  if (showCatalogLatestProducts === null) {
-    return;
-  }
-
-  showCatalogLatestProducts.addEventListener("click", function (evt) {
-    evt.preventDefault();
-
-    let productsArray = document.querySelectorAll(".product");
-    productsArray.forEach(function (item) {
-      if (item.classList.contains("js-is-catalog-latest-product") !== true &&
-          item.classList.contains("visually-hidden") !== true) {
-        item.classList.add("visually-hidden");
-      }
-    })
-  });
-})();
-
 document.addEventListener("DOMContentLoaded", function() {
   (function () {
     let mapElement = document.querySelector("#map");
@@ -70,6 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     //Hide map image, if map container was found
-    document.querySelector(".page-footer__map").classList.add("visually-hidden");
+    document.querySelector(".page-footer__map-image").classList.add("visually-hidden");
   })();
 });
