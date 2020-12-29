@@ -95,7 +95,7 @@
             <p class="form__desktop-col form__desktop-col--right form-fieldset__field">
               <label class="form__label form-fieldset__label form-fieldset__label--closer-to-field" for="pet-owner-phone">Телефон:*</label>
               <!-- при валидации введённого значения в случае ошибки добавляется класс form__input--invalid -->
-              <input class="form__input form__input--accent form__input--text" name="pet-owner-phone" id="pet-owner-phone" type="tel" required placeholder="8 (960) 900-60-90">
+              <input class="form__input form__input--accent form__input--text" name="pet-owner-phone" id="pet-owner-phone" type="tel" pattern="(\+?\d[- .]*){11}" required placeholder="8 (960) 900-60-90">
               <svg class="form__input-icon form__input-icon--phone" width="20" height="21" >
                 <use xlink:href="img/sprite.svg#input-icon--phone"></use>
               </svg>
