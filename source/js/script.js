@@ -1,8 +1,8 @@
 "use strict";
 
 (function () {
-  var navToggle = document.querySelector(".nav-toggle");
-  var navList = document.querySelector(".nav-list");
+  let navToggle = document.querySelector(".nav-toggle");
+  let navList = document.querySelector(".nav-list");
 
   if (navToggle === null || navList === null) {
     return;
@@ -21,3 +21,55 @@
   const clickEvent = new Event("click");
   navToggle.dispatchEvent(clickEvent);
 })();
+
+(function () {
+  let showCatalogLatestProducts = document.querySelector(".js-show-catalog-latest-products");
+
+  if (showCatalogLatestProducts === null) {
+    return;
+  }
+
+  showCatalogLatestProducts.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    let productsArray = document.querySelectorAll(".product");
+    productsArray.forEach(function (item) {
+      if (item.classList.contains("js-is-catalog-latest-product") !== true &&
+          item.classList.contains("visually-hidden") !== true) {
+        item.classList.add("visually-hidden");
+      }
+    })
+  });
+})();
+
+document.addEventListener("DOMContentLoaded", function() {
+  (function () {
+    let mapElement = document.querySelector("#map");
+    if (mapElement === null) {
+      return;
+    }
+
+    ymaps.ready(init);
+
+    function init() {
+      const companyCoordinates = [59.93863506417266, 30.323117499999945];
+      let companyMap = new ymaps.Map("map", {
+        center: companyCoordinates,
+        zoom: 14
+      });
+      let companyPlacemark = new ymaps.Placemark(companyCoordinates, {
+          hintContent: 'ул. Большая Конюшенная, д. 19/8, Санкт-Петербург'
+        }, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [57, 53],
+          iconImageOffset: [-26, -48]
+        }
+      );
+      companyMap.geoObjects.add(companyPlacemark);
+    }
+
+    //Hide map image, if map container was found
+    document.querySelector(".page-footer__map").classList.add("visually-hidden");
+  })();
+});
