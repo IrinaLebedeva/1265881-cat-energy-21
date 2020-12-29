@@ -52,14 +52,16 @@
   @media (min-width: $tablet-width) {
     height: 400px;
   }
+}
 
+.page-footer__map-image-wrapper {
   @media (min-width: $desktop-width) {
     width: $desktop-width;
     margin: 0 auto;
   }
 }
 
-.page-footer__map {
+.page-footer__map-image {
   width: 100%;
   object-fit: cover;
 
