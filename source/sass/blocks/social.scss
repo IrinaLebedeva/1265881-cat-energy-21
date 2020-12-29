@@ -67,6 +67,8 @@
 }
 
 .social__icon-facebook {
+  fill: none;
+
   @media (min-width: $tablet-width) {
     width: 28px;
     height: 33px;

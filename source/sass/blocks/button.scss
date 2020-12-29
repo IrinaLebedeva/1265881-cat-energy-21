@@ -34,6 +34,9 @@
 
     background-color: $background-color--secondary;
 
+    padding-top: 11px;
+    padding-bottom: 9px;
+
     display: block;
     width: 100%;
 
@@ -76,6 +79,24 @@
 
     @media (min-width: $desktop-width) {
       width: 568px;
+    }
+  }
+
+  &--product {
+    padding-top: 11px;
+    padding-bottom: 9px;
+  }
+
+  &--other-product {
+    padding-top: 10px;
+    padding-bottom: 9px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 8px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 10px;
     }
   }
 }
