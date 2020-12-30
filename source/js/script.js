@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
         zoom: 14
       });
       let companyPlacemark = new ymaps.Placemark(companyCoordinates, {
-          hintContent: 'ул. Большая Конюшенная, д. 19/8, Санкт-Петербург'
+          hintContent: "ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"
         }, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-pin.png',
+          iconLayout: "default#image",
+          iconImageHref: "img/map-pin.png",
           iconImageSize: [57, 53],
           iconImageOffset: [-26, -48]
         }
