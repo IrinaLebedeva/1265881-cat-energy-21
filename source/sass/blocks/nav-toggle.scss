@@ -2,12 +2,18 @@
   width: 24px;
   height: 16px;
 
+  display: inline-block;
+
   border: 0;
   cursor: pointer;
 
   background-color: $background-color--main;
 
   position: relative;
+
+  &--no-js {
+    display: none;
+  }
 }
 
 .nav-toggle--closed {

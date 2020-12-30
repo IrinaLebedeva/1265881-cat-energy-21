@@ -60,7 +60,14 @@
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
+      line-height: 20px;
+
       padding: 18px 26px;
+      max-width: 340px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 414px;
     }
   }
 

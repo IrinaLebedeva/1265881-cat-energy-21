@@ -33,7 +33,6 @@
 }
 
 .form-list__item {
-  position: relative;
   margin-bottom: 24px;
 
   &--row {
@@ -67,6 +66,8 @@
   display: flex;
   align-items: center;
 
+  position: relative;
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -96,20 +97,37 @@
 
     background-color: $background-color--main;
 
-    border-width: 8px;
+    border-width: 1px;
     border-style: solid;
-    border-color: $background-color--main;
     border-radius: 50%;
-
-    box-shadow: 0 0 0 1px $color--border-accent;
+    border-color: $color--border-accent;
 
     @media (min-width: $tablet-width) {
       top: -4px;
 
       width: 39px;
       height: 39px;
+    }
+  }
 
-      border-width: 11px;
+  &--radio:checked + label::after {
+    @include pseudo();
+    top: 2px;
+    left: 8px;
+
+    width: 13px;
+    height: 13px;
+
+    background-color: $background-color--accent;
+
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 7px;
+      left: 11px;
+
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -119,11 +137,7 @@
   }
 
   &--radio:hover + label::before {
-    box-shadow: 0 0 0 1px $color--border-list-input--hover;
-  }
-
-  &--radio:checked + label::before {
-    background-color: $background-color--accent;
+    border-color: $color--border-list-input--hover;
   }
 
   &--radio:disabled + label {

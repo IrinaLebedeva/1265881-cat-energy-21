@@ -20,6 +20,9 @@
   //Hide opened menu on mobile, if javascript is enabled
   const clickEvent = new Event("click");
   navToggle.dispatchEvent(clickEvent);
+
+  navToggle.parentElement.classList.remove("page-header__main-nav-toggle--no-js");
+  navToggle.classList.remove("nav-toggle--no-js");
 })();
 
 document.addEventListener("DOMContentLoaded", function() {
