@@ -160,10 +160,10 @@
 }
 
 .product__button {
-  @media (min-width: $tablet-width) {
-    display: block;
-    width: 100%;
-  }
+  display: block;
+  width: 100%;
+
+  align-self: flex-end;
 
   @media (min-width: $desktop-width) {
     margin-right: 4px;
