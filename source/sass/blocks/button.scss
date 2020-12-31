@@ -10,6 +10,8 @@
 
   padding-top: 7px;
   padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   background-color: $background-color--accent;
   border: none;
@@ -60,7 +62,14 @@
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
+      line-height: 20px;
+
       padding: 18px 26px;
+      max-width: 340px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 414px;
     }
   }
 
@@ -85,6 +94,9 @@
   &--product {
     padding-top: 11px;
     padding-bottom: 9px;
+
+    width: 100%;
+    text-align: center;
   }
 
   &--other-product {

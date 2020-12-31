@@ -19,9 +19,11 @@
       <a class="page-header__logo-text">
         <img src="img/page-header__logo-text.svg" width="101" height="18" alt="Кэт энерджи - текстовый логотип">
       </a>
-      <button class="page-header__main-nav-toggle nav-toggle nav-toggle--opened" type="button"><!--nav-toggle--closed-->
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+      <div class="page-header__main-nav-toggle page-header__main-nav-toggle--no-js">
+        <button class="nav-toggle nav-toggle--opened nav-toggle--no-js" type="button"><!--nav-toggle--closed-->
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
       <nav class="page-header__main-nav">
         <ul class="nav-list nav-list--with-bg"><!--nav-list--closed-->
           <li class="nav-list__item">
@@ -46,22 +48,20 @@
             </div>
           </div>
         </div>
-        <div class="tagline__footer-wrapper">
-          <div class="tagline__footer-container container">
-            <div class="tagline__image-wrapper">
-              <div class="tagline__image-container">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-energy-pro--500-chicken-tagline-desktop.webp 1x, img/cat-energy-pro--500-chicken-tagline-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-energy-pro--500-chicken-tagline-tablet.webp 1x, img/cat-energy-pro--500-chicken-tagline-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/cat-energy-pro--500-chicken-tagline-mobile.webp 1x,img/cat-energy-pro--500-chicken-tagline-mobile@2x.webp 2x">
-                  <source media="(min-width: 1440px)" srcset="img/cat-energy-pro--500-chicken-tagline-desktop.png 1x, img/cat-energy-pro--500-chicken-tagline-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/cat-energy-pro--500-chicken-tagline-tablet.jpg 1x, img/cat-energy-pro--500-chicken-tagline-tablet@2x.jpg 2x">
-                  <img class="tagline__image" src="img/cat-energy-pro--500-chicken-tagline-mobile.png" srcset="img/cat-energy-pro--500-chicken-tagline-mobile@2x.png 2x" width="280" height="270" alt="Изображение куриного корма для котов">
-                </picture>
-              </div>
+        <div class="tagline__footer-wrapper container">
+          <div class="tagline__image-wrapper">
+            <div class="tagline__image-container">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-energy-pro--500-chicken-tagline-desktop.webp 1x, img/cat-energy-pro--500-chicken-tagline-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-energy-pro--500-chicken-tagline-tablet.webp 1x, img/cat-energy-pro--500-chicken-tagline-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/cat-energy-pro--500-chicken-tagline-mobile.webp 1x,img/cat-energy-pro--500-chicken-tagline-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/cat-energy-pro--500-chicken-tagline-desktop.png 1x, img/cat-energy-pro--500-chicken-tagline-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/cat-energy-pro--500-chicken-tagline-tablet.jpg 1x, img/cat-energy-pro--500-chicken-tagline-tablet@2x.jpg 2x">
+                <img class="tagline__image" src="img/cat-energy-pro--500-chicken-tagline-mobile.png" srcset="img/cat-energy-pro--500-chicken-tagline-mobile@2x.png 2x" width="280" height="270" alt="Изображение куриного корма для котов">
+              </picture>
             </div>
-            <a class="tagline__button button button--tagline" href="form.html">Подобрать программу</a>
           </div>
+          <a class="tagline__button button button--tagline" href="form.html">Подобрать программу</a>
         </div>
       </section>
       <section class="page-main__cases cases container">

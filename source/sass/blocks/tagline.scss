@@ -1,12 +1,17 @@
 .tagline {
   @media (min-width: $desktop-width) {
     min-height: 573px;
+    position: relative;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .tagline__header-wrapper {
   background-image: url("../img/index-background-mobile.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
@@ -19,7 +24,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 160px;
+    margin-left: 80px;
   }
 }
 
@@ -90,7 +95,7 @@
     margin-bottom: 20px;
   }
 
-  @media (max-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     max-width: 414px;
   }
 }
@@ -100,12 +105,6 @@
 
   @media (min-width: $desktop-width) {
     position: unset;
-  }
-}
-
-.tagline__footer-container {
-  @media (min-width: $desktop-width) {
-    position: relative;
   }
 }
 
@@ -123,8 +122,8 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: -283px;
-    left: 478px;
+    top: 0;
+    left: 37.35%;
   }
 }
 
